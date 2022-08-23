@@ -18,7 +18,7 @@ class OWfpkm(OWBwBWidget):
     icon = getIconName(__file__,"normalize_pl.png")
     want_main_area = False
     docker_image_name = "biodepot/fpkm"
-    docker_image_tag = "alpine_3.12.1__775c521b"
+    docker_image_tag = "502144b7"
     inputs = [("geneinfofile",str,"handleInputsgeneinfofile"),("countsfile",str,"handleInputscountsfile")]
     outputs = [("countsfile",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
@@ -30,6 +30,7 @@ class OWfpkm(OWBwBWidget):
     optionsChecked=pset({})
     geneinfofile=pset("/data/gencode.gene.info.v22.tsv")
     countsfile=pset(None)
+    starformat=pset(False)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"fpkm")) as f:
