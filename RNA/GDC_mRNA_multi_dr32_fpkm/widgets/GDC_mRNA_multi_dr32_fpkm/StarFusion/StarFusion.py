@@ -18,7 +18,7 @@ class OWStarFusion(OWBwBWidget):
     icon = getIconName(__file__,"starfusion.png")
     want_main_area = False
     docker_image_name = "biodepot/star-fusion"
-    docker_image_tag = "1.4.0"
+    docker_image_tag = "1.9.0"
     inputs = [("genomelibdir",str,"handleInputsgenomelibdir"),("chimeric",str,"handleInputschimeric"),("Trigger",str,"handleInputsTrigger")]
     outputs = [("outputdir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
