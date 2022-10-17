@@ -19,6 +19,7 @@ unquotedFile() {
 mkdir -p $work_dir || exit 1
 mkdir -p $genome_dir || exit 1
 
+
 # Prepend output files with date and time
 [ -n "$prepend_date" ] && current_date=$(date +"%Y%m%d_%H%M%S_")
 
