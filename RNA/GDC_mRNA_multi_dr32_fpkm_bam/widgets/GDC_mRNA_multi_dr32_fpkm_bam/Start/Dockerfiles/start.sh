@@ -58,6 +58,8 @@ for file in "${files[@]}"; do
 		fastqo1_files+=(${fileBase}_o1.$fq)
 		fastqo2_files+=(${fileBase}_o2.$fq)
 		fastqs_files+=(${fileBase}_s.$fq)
+        fastq_star_files+=(${fileBase}_1.$fq)
+		fastq_star_files+=(${fileBase}_2.$fq)
 		archive_files+=($work_dir/${filename%.*}.bam)
 		if [ -n "${paired_end}" ]; then
 			# filenames for bwa
@@ -99,4 +101,5 @@ if $bamSeen; then
 	outputArrayVar fastqo1_files
 	outputArrayVar fastqo2_files
 	outputArrayVar fastqs_files
+    outputArrayVar fastq_star_files
 fi

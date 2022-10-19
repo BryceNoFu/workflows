@@ -18,8 +18,8 @@ class OWStart(OWBwBWidget):
     icon = getIconName(__file__,"start.png")
     want_main_area = False
     docker_image_name = "biodepot/gdc-mrna-start"
-    docker_image_tag = "alpine_3.12.1__384d16ee"
-    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("annotation_file",str),("geneinfo",str),("bypass_star_index",str),("gdc_credentials",str),("gdc_token",str),("bam_uuid",str),("bam_file",str),("fastq1_files",str),("fastq2_files",str),("fastqo1_files",str),("fastqo2_files",str),("fastqs_files",str),("biobambam_files",str),("bypass_biobambam",str)]
+    docker_image_tag = "alpine_3.12.1__384d16ee_starfastqinputs"
+    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("annotation_file",str),("geneinfo",str),("bypass_star_index",str),("gdc_credentials",str),("gdc_token",str),("bam_uuid",str),("bam_file",str),("fastq1_files",str),("fastq2_files",str),("fastqo1_files",str),("fastqo2_files",str),("fastqs_files",str),("fastq_star_files",str),("biobambam_files",str),("bypass_biobambam",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -42,6 +42,7 @@ class OWStart(OWBwBWidget):
     fastqo1_files=pset([])
     fastqo2_files=pset([])
     fastqs_files=pset([])
+    fastq_star_files=pset([])
     paired_end=pset(True)
     biobambam_files=pset([])
     prepend_date=pset(False)
@@ -115,6 +116,10 @@ class OWStart(OWBwBWidget):
         if hasattr(self,"fastqs_files"):
             outputValue=getattr(self,"fastqs_files")
         self.send("fastqs_files", outputValue)
+        outputValue=None
+        if hasattr(self,"fastq_star_files"):
+            outputValue=getattr(self,"fastq_star_files")
+        self.send("fastq_star_files", outputValue)
         outputValue=None
         if hasattr(self,"biobambam_files"):
             outputValue=getattr(self,"biobambam_files")
