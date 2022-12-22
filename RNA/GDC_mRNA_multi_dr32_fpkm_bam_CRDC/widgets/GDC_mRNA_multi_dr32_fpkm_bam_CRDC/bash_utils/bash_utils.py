@@ -11,16 +11,16 @@ from DockerClient import DockerClient
 from BwBase import OWBwBWidget, ConnectionDict, BwbGuiElements, getIconName, getJsonName
 from PyQt5 import QtWidgets, QtGui
 
-class OWjupyter_bioc(OWBwBWidget):
-    name = "jupyter_bioc"
-    description = "Base installation of Jupyter"
-    priority = 103
-    icon = getIconName(__file__,"jupyter-bioc.png")
+class OWbash_utils(OWBwBWidget):
+    name = "bash_utils"
+    description = "alpine bash with wget curl gzip bzip2"
+    priority = 1
+    icon = getIconName(__file__,"bash.png")
     want_main_area = False
-    docker_image_name = "biodepot/jupyter"
-    docker_image_tag = "5.6.0__ubuntu-18.04__bioc-3.7__R-3.5.1__firefox-61.0.1__081318"
-    inputs = [("InputDir",str,"handleInputsInputDir"),("Trigger",str,"handleInputsTrigger"),("startingNotebook",str,"handleInputsstartingNotebook")]
-    outputs = [("OutputDir",str),("outputNotebook",str)]
+    docker_image_name = "biodepot/bash-utils"
+    docker_image_tag = "alpine-3.7__081418"
+    inputs = [("inputFile",str,"handleInputsinputFile"),("Trigger",str,"handleInputsTrigger"),("dirs",str,"handleInputsdirs")]
+    outputs = [("OutputDir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -28,36 +28,19 @@ class OWjupyter_bioc(OWBwBWidget):
     triggerReady=pset({})
     inputConnectionsStore=pset({})
     optionsChecked=pset({})
-    subcommand=pset("notebook")
-    startingNotebook=pset(None)
-    type=pset("notebook")
-    outputNotebook=pset(None)
-    debug=pset(False)
-    generateConfig=pset(False)
-    autoyes=pset(True)
-    allowRoot=pset(True)
-    loglevel=pset("30")
-    ip=pset("0.0.0.0")
-    port=pset(8888)
-    config=pset(None)
-    transport=pset(None)
-    keyfile=pset(None)
-    certfile=pset(None)
-    clientca=pset(None)
-    nomathjax=pset(False)
-    browser=pset(None)
-    execute=pset(False)
+    InputFile=pset(None)
+    dirs=pset([])
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
-        with open(getJsonName(__file__,"jupyter_bioc")) as f:
+        with open(getJsonName(__file__,"bash_utils")) as f:
             self.data=jsonpickle.decode(f.read())
             f.close()
         self.initVolumes()
         self.inputConnections = ConnectionDict(self.inputConnectionsStore)
         self.drawGUI()
-    def handleInputsInputDir(self, value, *args):
+    def handleInputsinputFile(self, value, *args):
         if args and len(args) > 0: 
-            self.handleInputs("InputDir", value, args[0][0], test=args[0][3])
+            self.handleInputs("inputFile", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleInputsTrigger(self, value, *args):
@@ -65,9 +48,9 @@ class OWjupyter_bioc(OWBwBWidget):
             self.handleInputs("Trigger", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
-    def handleInputsstartingNotebook(self, value, *args):
+    def handleInputsdirs(self, value, *args):
         if args and len(args) > 0: 
-            self.handleInputs("startingNotebook", value, args[0][0], test=args[0][3])
+            self.handleInputs("dirs", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
@@ -75,7 +58,3 @@ class OWjupyter_bioc(OWBwBWidget):
         if hasattr(self,"OutputDir"):
             outputValue=getattr(self,"OutputDir")
         self.send("OutputDir", outputValue)
-        outputValue=None
-        if hasattr(self,"outputNotebook"):
-            outputValue=getattr(self,"outputNotebook")
-        self.send("outputNotebook", outputValue)

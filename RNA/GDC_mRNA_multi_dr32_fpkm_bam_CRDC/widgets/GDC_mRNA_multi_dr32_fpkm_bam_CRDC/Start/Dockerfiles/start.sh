@@ -19,6 +19,13 @@ unquotedFile() {
 mkdir -p $work_dir || exit 1
 mkdir -p $genome_dir || exit 1
 
+# Make each sample have their own directory for bam to fastq output conversion (needs to be separated to work)
+gtexFastqDirs=($(makeArrayString $gtex_fastq_dirs))
+for gtexFastqdir in "${gtexFastqDirs[@]}"; do
+    mkdir -p gtexFastqdir || exit 1
+done
+
+mkdir -p $gtex_fastq_dirs || exit 1
 
 # Prepend output files with date and time
 [ -n "$prepend_date" ] && current_date=$(date +"%Y%m%d_%H%M%S_")

@@ -19,7 +19,7 @@ class OWStart(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/gdc-mrna-start"
     docker_image_tag = "alpine_3.12__59b7cb77"
-    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("annotation_file",str),("geneinfo",str),("bypass_star_index",str),("gdc_credentials",str),("gdc_token",str),("bam_uuid",str),("bam_file",str),("fastq1_files",str),("fastq2_files",str),("fastqo1_files",str),("fastqo2_files",str),("fastqs_files",str),("fastq_star_files",str),("biobambam_files",str),("bypass_biobambam",str),("gtex_credentials",str)]
+    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("annotation_file",str),("geneinfo",str),("bypass_star_index",str),("gdc_credentials",str),("gdc_token",str),("bam_uuid",str),("bam_file",str),("fastq1_files",str),("fastq2_files",str),("fastqo1_files",str),("fastqo2_files",str),("fastqs_files",str),("fastq_star_files",str),("biobambam_files",str),("bypass_biobambam",str),("gtex_credentials",str),("gtex_fastq_dirs",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -48,6 +48,7 @@ class OWStart(OWBwBWidget):
     prepend_date=pset(False)
     bypass_biobambam=pset(False)
     gtex_credentials=pset(None)
+    gtex_fastq_dirs=pset([])
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"Start")) as f:
@@ -133,3 +134,7 @@ class OWStart(OWBwBWidget):
         if hasattr(self,"gtex_credentials"):
             outputValue=getattr(self,"gtex_credentials")
         self.send("gtex_credentials", outputValue)
+        outputValue=None
+        if hasattr(self,"gtex_fastq_dirs"):
+            outputValue=getattr(self,"gtex_fastq_dirs")
+        self.send("gtex_fastq_dirs", outputValue)

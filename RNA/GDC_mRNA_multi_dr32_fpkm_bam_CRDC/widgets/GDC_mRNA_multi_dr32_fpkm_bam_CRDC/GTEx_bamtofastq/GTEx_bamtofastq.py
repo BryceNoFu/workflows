@@ -19,7 +19,7 @@ class OWGTEx_bamtofastq(OWBwBWidget):
     want_main_area = False
     docker_image_name = "broadinstitute/gtex_rnaseq"
     docker_image_tag = "latest"
-    inputs = [("trigger",str,"handleInputstrigger"),("outputDir",str,"handleInputsoutputDir")]
+    inputs = [("trigger",str,"handleInputstrigger"),("outputDir",str,"handleInputsoutputDir"),("dirsTrigger",str,"handleInputsdirsTrigger")]
     outputs = [("outputDir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -28,9 +28,9 @@ class OWGTEx_bamtofastq(OWBwBWidget):
     triggerReady=pset({})
     inputConnectionsStore=pset({})
     optionsChecked=pset({})
-    inputFile=pset(None)
-    outputDir=pset(None)
-    sampleID=pset(None)
+    inputFile=pset([])
+    outputDir=pset([])
+    sampleID=pset([])
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"GTEx_bamtofastq")) as f:
@@ -47,6 +47,11 @@ class OWGTEx_bamtofastq(OWBwBWidget):
     def handleInputsoutputDir(self, value, *args):
         if args and len(args) > 0: 
             self.handleInputs("outputDir", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsdirsTrigger(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("dirsTrigger", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
