@@ -18,8 +18,8 @@ class OWfpkm(OWBwBWidget):
     icon = getIconName(__file__,"normalize_pl.png")
     want_main_area = False
     docker_image_name = "biodepot/fpkm"
-    docker_image_tag = "alpine_3.12.1__775c521b"
-    inputs = [("geneinfofile",str,"handleInputsgeneinfofile"),("countsfile",str,"handleInputscountsfile")]
+    docker_image_tag = "alpine_3.12.1__502144b7"
+    inputs = [("geneinfofile",str,"handleInputsgeneinfofile"),("countsfile",str,"handleInputscountsfile"),("trigger",str,"handleInputstrigger")]
     outputs = [("countsfile",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -46,6 +46,11 @@ class OWfpkm(OWBwBWidget):
     def handleInputscountsfile(self, value, *args):
         if args and len(args) > 0: 
             self.handleInputs("countsfile", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputstrigger(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("trigger", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
