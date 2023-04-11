@@ -19,7 +19,7 @@ class OWUtilities_fastqDump(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/sratools-vdb"
     docker_image_tag = "3.0.3__3.0.2__bookworm-slim__0924831c__215120ac__57f3b966"
-    inputs = [("Trigger",str,"handleInputsTrigger"),("OutputDir",str,"handleInputsOutputDir")]
+    inputs = [("Trigger",str,"handleInputsTrigger"),("OutputDir",str,"handleInputsOutputDir"),("sraids",str,"handleInputssraids")]
     outputs = [("OutputDir",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -85,6 +85,11 @@ class OWUtilities_fastqDump(OWBwBWidget):
     def handleInputsOutputDir(self, value, *args):
         if args and len(args) > 0: 
             self.handleInputs("OutputDir", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputssraids(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("sraids", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
