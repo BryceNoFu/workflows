@@ -1,0 +1,11 @@
+<?xml version="1.0" ?><scheme description="" title="nf-core-rnaseq" version="2.0">
+	<nodes>
+		<node id="0" name="Nextflow" position="(593.0, 313.0)" project_name="nf-core-rnaseq" qualified_name="nf_core_rnaseq.OWNextflow.OWNextflow" title="Nextflow" version=""/>
+	</nodes>
+	<links/>
+	<annotations/>
+	<thumbnail/>
+	<node_properties>
+		<properties format="literal" node_id="0">{'InputFile': 'nf-core/rnaseq', 'controlAreaVisible': True, 'exportGraphics': False, 'genome': 'GRCh37', 'input': '/data/nf_test/samplesheet.csv', 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'input': True, 'outdir': True, 'genome': True, 'profile': True}, 'outdir': '/data/nf_test/out', 'profile': 'docker', 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x0e\x00\x00\x00\x9b\x00\x00\t^\x00\x00\x03\xf6\x00\x00\x05\x0e\x00\x00\x00\xb3\x00\x00\t^\x00\x00\x03\xf3\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+	</node_properties>
+</scheme>
