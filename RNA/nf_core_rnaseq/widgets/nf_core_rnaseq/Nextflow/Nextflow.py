@@ -33,6 +33,18 @@ class OWNextflow(OWBwBWidget):
     outdir=pset(None)
     genome=pset(None)
     profile=pset("docker")
+    gtf_file=pset(None)
+    gff_file=pset(None)
+    transcript_fasta=pset(None)
+    additional_fasta=pset(None)
+    bbsplit_fasta_list=pset(None)
+    salmon_index=pset(None)
+    hisat2_index=pset(None)
+    rsem_index=pset(None)
+    aligner=pset(None)
+    pseudo_aligner=pset(None)
+    skip_bbsplit=pset(False)
+    umitools_bc_pattern=pset(None)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"Nextflow")) as f:
