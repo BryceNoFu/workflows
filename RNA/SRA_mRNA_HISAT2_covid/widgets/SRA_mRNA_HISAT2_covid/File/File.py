@@ -17,8 +17,8 @@ class OWFile(OWBwBWidget):
     priority = 10
     icon = getIconName(__file__,"ogp.png")
     want_main_area = False
-    docker_image_name = "biodepot/alpine-bash"
-    docker_image_tag = "3.7"
+    docker_image_name = "brycenofu/hisat2"
+    docker_image_tag = "ubuntu22.04"
     inputs = [("Trigger",str,"handleInputsTrigger"),("mate_1",str,"handleInputsmate_1"),("mate_2",str,"handleInputsmate_2"),("sam_output",str,"handleInputssam_output"),("hisat2_idx",str,"handleInputshisat2_idx")]
     outputs = [("File",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
@@ -32,6 +32,8 @@ class OWFile(OWBwBWidget):
     mate_1=pset([])
     mate_2=pset([])
     sam_output=pset(None)
+    unpaired=pset([])
+    sraids=pset([])
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"File")) as f:
