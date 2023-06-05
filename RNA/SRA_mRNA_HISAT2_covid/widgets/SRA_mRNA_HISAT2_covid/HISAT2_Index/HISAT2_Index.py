@@ -19,7 +19,7 @@ class OWHISAT2_Index(OWBwBWidget):
     want_main_area = False
     docker_image_name = "brycenofu/hisat2"
     docker_image_tag = "ubuntu22.04"
-    inputs = [("Trigger",str,"handleInputsTrigger"),("reference_in",str,"handleInputsreference_in"),("ht2_base",str,"handleInputsht2_base")]
+    inputs = [("Trigger",str,"handleInputsTrigger"),("reference_in",str,"handleInputsreference_in"),("ht2_idx",str,"handleInputsht2_idx")]
     outputs = [("ht2_base",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -29,7 +29,7 @@ class OWHISAT2_Index(OWBwBWidget):
     inputConnectionsStore=pset({})
     optionsChecked=pset({})
     reference_in=pset(None)
-    ht2_base=pset(None)
+    ht2_idx=pset(None)
     p=pset(1)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
@@ -49,9 +49,9 @@ class OWHISAT2_Index(OWBwBWidget):
             self.handleInputs("reference_in", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
-    def handleInputsht2_base(self, value, *args):
+    def handleInputsht2_idx(self, value, *args):
         if args and len(args) > 0: 
-            self.handleInputs("ht2_base", value, args[0][0], test=args[0][3])
+            self.handleInputs("ht2_idx", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):

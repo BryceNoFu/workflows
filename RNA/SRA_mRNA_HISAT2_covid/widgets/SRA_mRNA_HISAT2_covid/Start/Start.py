@@ -19,7 +19,7 @@ class OWStart(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/gdc-mrna-start"
     docker_image_tag = "alpine_3.12__59b7cb77"
-    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("annotation_file",str),("geneinfo",str),("bypass_star_index",str),("sra_ids",str)]
+    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("sra_ids",str),("sra_fastqs",str),("sra_sams",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -28,14 +28,10 @@ class OWStart(OWBwBWidget):
     inputConnectionsStore=pset({})
     optionsChecked=pset({})
     work_dir=pset(None)
-    genome_dir=pset(None)
     genome_file=pset(None)
-    annotation_file=pset(None)
-    geneinfo=pset(None)
-    bypass_star_index=pset(True)
-    paired_end=pset(True)
-    prepend_date=pset(False)
     sra_ids=pset([])
+    genome_dir=pset(None)
+    basename=pset("genome")
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"Start")) as f:
@@ -58,18 +54,14 @@ class OWStart(OWBwBWidget):
             outputValue=getattr(self,"genome_file")
         self.send("genome_file", outputValue)
         outputValue=None
-        if hasattr(self,"annotation_file"):
-            outputValue=getattr(self,"annotation_file")
-        self.send("annotation_file", outputValue)
-        outputValue=None
-        if hasattr(self,"geneinfo"):
-            outputValue=getattr(self,"geneinfo")
-        self.send("geneinfo", outputValue)
-        outputValue=None
-        if hasattr(self,"bypass_star_index"):
-            outputValue=getattr(self,"bypass_star_index")
-        self.send("bypass_star_index", outputValue)
-        outputValue=None
         if hasattr(self,"sra_ids"):
             outputValue=getattr(self,"sra_ids")
         self.send("sra_ids", outputValue)
+        outputValue=None
+        if hasattr(self,"sra_fastqs"):
+            outputValue=getattr(self,"sra_fastqs")
+        self.send("sra_fastqs", outputValue)
+        outputValue=None
+        if hasattr(self,"sra_sams"):
+            outputValue=getattr(self,"sra_sams")
+        self.send("sra_sams", outputValue)

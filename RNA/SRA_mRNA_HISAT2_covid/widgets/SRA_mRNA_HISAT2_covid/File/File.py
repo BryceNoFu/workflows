@@ -31,7 +31,7 @@ class OWFile(OWBwBWidget):
     hisat2_idx=pset(None)
     mate_1=pset([])
     mate_2=pset([])
-    sam_output=pset(None)
+    sam_output=pset([])
     unpaired=pset([])
     sraids=pset([])
     nthreads=pset(None)
