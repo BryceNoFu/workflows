@@ -20,7 +20,7 @@ class OWFile(OWBwBWidget):
     docker_image_name = "brycenofu/hisat2"
     docker_image_tag = "ubuntu22.04"
     inputs = [("Trigger",str,"handleInputsTrigger"),("mate_1",str,"handleInputsmate_1"),("mate_2",str,"handleInputsmate_2"),("sam_output",str,"handleInputssam_output"),("hisat2_idx",str,"handleInputshisat2_idx")]
-    outputs = [("File",str)]
+    outputs = [("sam_output",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -70,6 +70,6 @@ class OWFile(OWBwBWidget):
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
         outputValue=None
-        if hasattr(self,"File"):
-            outputValue=getattr(self,"File")
-        self.send("File", outputValue)
+        if hasattr(self,"sam_output"):
+            outputValue=getattr(self,"sam_output")
+        self.send("sam_output", outputValue)

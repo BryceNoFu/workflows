@@ -11,16 +11,16 @@ from DockerClient import DockerClient
 from BwBase import OWBwBWidget, ConnectionDict, BwbGuiElements, getIconName, getJsonName
 from PyQt5 import QtWidgets, QtGui
 
-class OWHISAT2_Index(OWBwBWidget):
-    name = "HISAT2_Index"
-    description = "hisat2 index builder"
+class OWMiscellaneous_File(OWBwBWidget):
+    name = "Miscellaneous_File"
+    description = "featureCounts sam to counts"
     priority = 10
-    icon = getIconName(__file__,"ogp.png")
+    icon = getIconName(__file__,"SubreadSmallLogo.png")
     want_main_area = False
-    docker_image_name = "brycenofu/hisat2"
-    docker_image_tag = "ubuntu22.04"
-    inputs = [("Trigger",str,"handleInputsTrigger"),("reference_in",str,"handleInputsreference_in"),("hisat2_idx",str,"handleInputshisat2_idx")]
-    outputs = [("hisat2_idx",str)]
+    docker_image_name = "brycenofu/subread"
+    docker_image_tag = "test"
+    inputs = [("Trigger",str,"handleInputsTrigger"),("sam_input",str,"handleInputssam_input"),("annotation_gtf",str,"handleInputsannotation_gtf")]
+    outputs = [("counts_output",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -28,12 +28,15 @@ class OWHISAT2_Index(OWBwBWidget):
     triggerReady=pset({})
     inputConnectionsStore=pset({})
     optionsChecked=pset({})
-    reference_in=pset(None)
-    ht2_idx=pset(None)
-    nthreads=pset(1)
+    annotation_gtf=pset(None)
+    counts_output=pset(None)
+    sam_input=pset([])
+    paired_end_inputs=pset(False)
+    paired_end_reads=pset(False)
+    nthreads=pset(None)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
-        with open(getJsonName(__file__,"HISAT2_Index")) as f:
+        with open(getJsonName(__file__,"Miscellaneous_File")) as f:
             self.data=jsonpickle.decode(f.read())
             f.close()
         self.initVolumes()
@@ -44,18 +47,18 @@ class OWHISAT2_Index(OWBwBWidget):
             self.handleInputs("Trigger", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
-    def handleInputsreference_in(self, value, *args):
+    def handleInputssam_input(self, value, *args):
         if args and len(args) > 0: 
-            self.handleInputs("reference_in", value, args[0][0], test=args[0][3])
+            self.handleInputs("sam_input", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
-    def handleInputshisat2_idx(self, value, *args):
+    def handleInputsannotation_gtf(self, value, *args):
         if args and len(args) > 0: 
-            self.handleInputs("hisat2_idx", value, args[0][0], test=args[0][3])
+            self.handleInputs("annotation_gtf", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
         outputValue=None
-        if hasattr(self,"hisat2_idx"):
-            outputValue=getattr(self,"hisat2_idx")
-        self.send("hisat2_idx", outputValue)
+        if hasattr(self,"counts_output"):
+            outputValue=getattr(self,"counts_output")
+        self.send("counts_output", outputValue)
