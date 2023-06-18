@@ -11,16 +11,16 @@ from DockerClient import DockerClient
 from BwBase import OWBwBWidget, ConnectionDict, BwbGuiElements, getIconName, getJsonName
 from PyQt5 import QtWidgets, QtGui
 
-class OWHISAT2_Index(OWBwBWidget):
-    name = "HISAT2_Index"
-    description = "hisat2 index builder"
+class OWHISAT2_Align(OWBwBWidget):
+    name = "HISAT2_Align"
+    description = "HISAT2 FASTQ Alignment"
     priority = 10
     icon = getIconName(__file__,"ogp.png")
     want_main_area = False
     docker_image_name = "brycenofu/hisat2"
     docker_image_tag = "ubuntu22.04"
-    inputs = [("Trigger",str,"handleInputsTrigger"),("reference_in",str,"handleInputsreference_in"),("hisat2_idx",str,"handleInputshisat2_idx")]
-    outputs = [("hisat2_idx",str)]
+    inputs = [("Trigger",str,"handleInputsTrigger"),("mate_1",str,"handleInputsmate_1"),("mate_2",str,"handleInputsmate_2"),("sam_output",str,"handleInputssam_output"),("hisat2_idx",str,"handleInputshisat2_idx")]
+    outputs = [("sam_output",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -28,12 +28,16 @@ class OWHISAT2_Index(OWBwBWidget):
     triggerReady=pset({})
     inputConnectionsStore=pset({})
     optionsChecked=pset({})
-    reference_in=pset(None)
     hisat2_idx=pset(None)
-    nthreads=pset(1)
+    mate_1=pset([])
+    mate_2=pset([])
+    sam_output=pset([])
+    unpaired=pset([])
+    sraids=pset([])
+    nthreads=pset(None)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
-        with open(getJsonName(__file__,"HISAT2_Index")) as f:
+        with open(getJsonName(__file__,"HISAT2_Align")) as f:
             self.data=jsonpickle.decode(f.read())
             f.close()
         self.initVolumes()
@@ -44,9 +48,19 @@ class OWHISAT2_Index(OWBwBWidget):
             self.handleInputs("Trigger", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
-    def handleInputsreference_in(self, value, *args):
+    def handleInputsmate_1(self, value, *args):
         if args and len(args) > 0: 
-            self.handleInputs("reference_in", value, args[0][0], test=args[0][3])
+            self.handleInputs("mate_1", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsmate_2(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("mate_2", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputssam_output(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("sam_output", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleInputshisat2_idx(self, value, *args):
@@ -56,6 +70,6 @@ class OWHISAT2_Index(OWBwBWidget):
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
         outputValue=None
-        if hasattr(self,"hisat2_idx"):
-            outputValue=getattr(self,"hisat2_idx")
-        self.send("hisat2_idx", outputValue)
+        if hasattr(self,"sam_output"):
+            outputValue=getattr(self,"sam_output")
+        self.send("sam_output", outputValue)
