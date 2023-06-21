@@ -17,8 +17,8 @@ class OWfeatureCounts(OWBwBWidget):
     priority = 10
     icon = getIconName(__file__,"SubreadSmallLogo.png")
     want_main_area = False
-    docker_image_name = "brycenofu/subread"
-    docker_image_tag = "test"
+    docker_image_name = "biodepot/subread"
+    docker_image_tag = "latest"
     inputs = [("Trigger",str,"handleInputsTrigger"),("sam_input",str,"handleInputssam_input"),("annotation_gtf",str,"handleInputsannotation_gtf")]
     outputs = [("counts_output",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

@@ -17,8 +17,8 @@ class OWHISAT2_Index(OWBwBWidget):
     priority = 10
     icon = getIconName(__file__,"ogp.png")
     want_main_area = False
-    docker_image_name = "brycenofu/hisat2"
-    docker_image_tag = "ubuntu22.04"
+    docker_image_name = "biodepot/hisat2"
+    docker_image_tag = "latest"
     inputs = [("Trigger",str,"handleInputsTrigger"),("reference_in",str,"handleInputsreference_in"),("hisat2_idx",str,"handleInputshisat2_idx")]
     outputs = [("hisat2_idx",str)]
     pset=functools.partial(settings.Setting,schema_only=True)

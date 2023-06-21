@@ -17,8 +17,8 @@ class OWHISAT2_Align(OWBwBWidget):
     priority = 10
     icon = getIconName(__file__,"ogp.png")
     want_main_area = False
-    docker_image_name = "brycenofu/hisat2"
-    docker_image_tag = "ubuntu22.04"
+    docker_image_name = "biodepot/hisat2"
+    docker_image_tag = "latest"
     inputs = [("Trigger",str,"handleInputsTrigger"),("mate_1",str,"handleInputsmate_1"),("mate_2",str,"handleInputsmate_2"),("sam_output",str,"handleInputssam_output"),("hisat2_idx",str,"handleInputshisat2_idx")]
     outputs = [("sam_output",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
