@@ -17,9 +17,9 @@ class OWStart(OWBwBWidget):
     priority = 10
     icon = getIconName(__file__,"start.png")
     want_main_area = False
-    docker_image_name = "brycenofu/hisat2-mrna-start"
+    docker_image_name = "biodepot/hisat2-mrna-start"
     docker_image_tag = "latest"
-    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("sra_ids",str),("mate_1",str),("mate_2",str),("unpaired",str),("sam_output",str),("hisat2_idx",str),("annotation_gtf",str)]
+    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("sra_ids",str),("mate_1",str),("mate_2",str),("unpaired",str),("sam_output",str),("hisat2_idx",str),("annotation_gtf",str),("gzip",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -38,6 +38,7 @@ class OWStart(OWBwBWidget):
     unpaired=pset([])
     sam_output=pset([])
     hisat2_idx=pset(None)
+    gzip=pset(False)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"Start")) as f:
@@ -87,3 +88,7 @@ class OWStart(OWBwBWidget):
         if hasattr(self,"annotation_gtf"):
             outputValue=getattr(self,"annotation_gtf")
         self.send("annotation_gtf", outputValue)
+        outputValue=None
+        if hasattr(self,"gzip"):
+            outputValue=getattr(self,"gzip")
+        self.send("gzip", outputValue)

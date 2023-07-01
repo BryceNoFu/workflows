@@ -65,7 +65,14 @@ def main():
                         nargs = '+',
                         help = "Basename for index files created from fasta (<basename>.<#>.ht2).",
                         required = True)
-
+    
+    # Option to gzip downloaded FASTQ files
+    parser.add_argument('-gzip',
+                        help = "Make fastq files gzipped when downloaded",
+                        required = False,
+                        action = 'store_true')
+    
+    # test arg: '-workdir /data/work -sraids SRR23348828 SRR23348827 SRR23348823 SRR23348820 -genomedir /data/genome -basename genome -gzip'.split()
     args = parser.parse_args()
 
     # Get flag contents
@@ -73,6 +80,7 @@ def main():
     genome_dir = args.genomedir[0]
     basename = args.basename[0]
     ids = args.sraids
+    gzip = args.gzip
     print("Work directory: {}".format(work_dir))
     print("Genome directory: {}".format(genome_dir))
     print("Basename: {}".format(basename))
@@ -86,6 +94,12 @@ def main():
     fastq1 = ["{}/{}_1.fastq".format(work_dir, sraid) for sraid in ids]
     fastq2 = ["{}/{}_2.fastq".format(work_dir, sraid) for sraid in ids]
     fastq_unpaired = ["{}/{}.fastq".format(work_dir, sraid) for sraid in ids]
+
+    # Make fastq files gzipped if gzip=True
+    if gzip:
+        fastq1 = [fastq + '.gz' for fastq in fastq1]
+        fastq2 = [fastq + '.gz' for fastq in fastq2]
+        fastq_unpaired = [fastq + '.gz' for fastq in fastq_unpaired]
 
     # Make list of expected sam file outputs (outputs after HISAT2 Align step) from SRA IDs
     sam = ["{}/{}.sam".format(work_dir, sraid) for sraid in ids]
