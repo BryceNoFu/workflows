@@ -1,0 +1,11 @@
+<?xml version="1.0" ?><scheme description="" title="nextflow" version="2.0">
+	<nodes>
+		<node id="0" name="nextflow" position="(407.0, 299.0)" project_name="nextflow" qualified_name="nextflow.OWnextflow.OWnextflow" title="nfcore" version=""/>
+	</nodes>
+	<links/>
+	<annotations/>
+	<thumbnail/>
+	<node_properties>
+		<properties format="literal" node_id="0">{'background1': False, 'command': 'run', 'config': '', 'configfiles': [], 'controlAreaVisible': True, 'exportGraphics': False, 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['configfiles'], 'nWorkers': 1}, 'jvmprops': '', 'logfile': '', 'nWorkers': 1, 'nxfassets': '/home/lhhung/ssh_repos/.nextflow/assets', 'nxfdockeropts': '&quot;-u 1000&quot;', 'nxfusrmap': '1000', 'optionsChecked': {'withdocker': True, 'nxfusrmap': True, 'nxfdockeropts': True, 'script': False, 'profile': True, 'repo': True, 'outdir': True, 'nxfassets': True, 'configfiles': False, 'jvmprops': False, 'background': False, 'config': False, 'logfile': False, 'quiet': False, 'pipeline': False, 'background1': False, 'parametersfile': False}, 'outdir': '/data/nfoutput', 'parametersfile': '', 'pipeline': '', 'profile': 'test,docker', 'quiet': False, 'repo': 'nf-core/rnaseq -r dev', 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\xbf\x00\x00\x00R\x00\x00\x06\x84\x00\x00\x03t\x00\x00\x02\xbf\x00\x00\x00R\x00\x00\x06\x84\x00\x00\x03t\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'script': '', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, 'withdocker': '  ', 'workingdir': '/data/', '__version__': 1}</properties>
+	</node_properties>
+</scheme>
