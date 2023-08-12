@@ -19,7 +19,7 @@ class OWfeatureCounts(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/subread"
     docker_image_tag = "latest"
-    inputs = [("Trigger",str,"handleInputsTrigger"),("sam_input",str,"handleInputssam_input"),("annotation_gtf",str,"handleInputsannotation_gtf")]
+    inputs = [("Trigger",str,"handleInputsTrigger"),("sambam_input",str,"handleInputssambam_input"),("annotation_gtf",str,"handleInputsannotation_gtf")]
     outputs = [("counts_output",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -30,7 +30,7 @@ class OWfeatureCounts(OWBwBWidget):
     optionsChecked=pset({})
     annotation_gtf=pset(None)
     counts_output=pset(None)
-    sam_input=pset([])
+    sambam_input=pset([])
     paired_end_inputs=pset(False)
     paired_end_reads=pset(False)
     nthreads=pset(None)
@@ -47,9 +47,9 @@ class OWfeatureCounts(OWBwBWidget):
             self.handleInputs("Trigger", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
-    def handleInputssam_input(self, value, *args):
+    def handleInputssambam_input(self, value, *args):
         if args and len(args) > 0: 
-            self.handleInputs("sam_input", value, args[0][0], test=args[0][3])
+            self.handleInputs("sambam_input", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleInputsannotation_gtf(self, value, *args):

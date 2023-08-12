@@ -19,7 +19,7 @@ class OWStart(OWBwBWidget):
     want_main_area = False
     docker_image_name = "biodepot/hisat2-mrna-start"
     docker_image_tag = "latest"
-    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("sra_ids",str),("mate_1",str),("mate_2",str),("unpaired",str),("sam_output",str),("hisat2_idx",str),("annotation_gtf",str),("gzip",str)]
+    outputs = [("work_dir",str),("genome_dir",str),("genome_file",str),("sra_ids",str),("mate_1",str),("mate_2",str),("unpaired",str),("sam_output",str),("hisat2_idx",str),("annotation_gtf",str),("gzip",str),("bam_output",str),("sorted_bam_output",str),("metafile",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
     exportGraphics=pset(False)
@@ -39,6 +39,11 @@ class OWStart(OWBwBWidget):
     sam_output=pset([])
     hisat2_idx=pset(None)
     gzip=pset(False)
+    sorted_bam_output=pset([])
+    bam_output=pset([])
+    sraidswt=pset([])
+    metafile=pset([])
+    sraidsmutant=pset([])
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"Start")) as f:
@@ -92,3 +97,15 @@ class OWStart(OWBwBWidget):
         if hasattr(self,"gzip"):
             outputValue=getattr(self,"gzip")
         self.send("gzip", outputValue)
+        outputValue=None
+        if hasattr(self,"bam_output"):
+            outputValue=getattr(self,"bam_output")
+        self.send("bam_output", outputValue)
+        outputValue=None
+        if hasattr(self,"sorted_bam_output"):
+            outputValue=getattr(self,"sorted_bam_output")
+        self.send("sorted_bam_output", outputValue)
+        outputValue=None
+        if hasattr(self,"metafile"):
+            outputValue=getattr(self,"metafile")
+        self.send("metafile", outputValue)
