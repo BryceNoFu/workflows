@@ -1,11 +1,55 @@
 <?xml version="1.0" ?><scheme description="" title="nextflow" version="2.0">
 	<nodes>
 		<node id="0" name="nextflow" position="(407.0, 299.0)" project_name="nextflow" qualified_name="nextflow.OWnextflow.OWnextflow" title="nfcore" version=""/>
+		<node id="1" name="S3_download" position="(557.0, 299.0)" project_name="nextflow" qualified_name="nextflow.OWS3_download.OWS3_download" title="S3_download" version=""/>
+		<node id="2" name="fastqDump" position="(707.0, 299.0)" project_name="nextflow" qualified_name="nextflow.OWfastqDump.OWfastqDump" title="fastqDump" version=""/>
+		<node id="3" name="downloadURL" position="(358.0, 114.0)" project_name="nextflow" qualified_name="nextflow.OWdownloadURL.OWdownloadURL" title="downloadURL" version=""/>
+		<node id="4" name="nextflow" position="(1007.0, 298.0)" project_name="nextflow" qualified_name="nextflow.OWnextflow.OWnextflow" title="nextflow" version=""/>
 	</nodes>
 	<links/>
 	<annotations/>
 	<thumbnail/>
 	<node_properties>
-		<properties format="literal" node_id="0">{'background1': False, 'command': 'run', 'config': '', 'configfiles': [], 'controlAreaVisible': True, 'exportGraphics': False, 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['configfiles'], 'nWorkers': 1}, 'jvmprops': '', 'logfile': '', 'nWorkers': 1, 'nxfassets': '/home/lhhung/ssh_repos/.nextflow/assets', 'nxfdockeropts': '&quot;-u 1000&quot;', 'nxfusrmap': '1000', 'optionsChecked': {'withdocker': True, 'nxfusrmap': True, 'nxfdockeropts': True, 'script': False, 'profile': True, 'repo': True, 'outdir': True, 'nxfassets': True, 'configfiles': False, 'jvmprops': False, 'background': False, 'config': False, 'logfile': False, 'quiet': False, 'pipeline': False, 'background1': False, 'parametersfile': False}, 'outdir': '/data/nfoutput', 'parametersfile': '', 'pipeline': '', 'profile': 'test,docker', 'quiet': False, 'repo': 'nf-core/rnaseq -r dev', 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\xbf\x00\x00\x00R\x00\x00\x06\x84\x00\x00\x03t\x00\x00\x02\xbf\x00\x00\x00R\x00\x00\x06\x84\x00\x00\x03t\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'script': '', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, 'withdocker': '  ', 'workingdir': '/data/', '__version__': 1}</properties>
+		<properties format="literal" node_id="0">{'background1': False, 'command': 'run', 'config': '/home/fukudab/workflow_work/custom_config.config', 'configfiles': [], 'controlAreaVisible': True, 'exportGraphics': False, 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['configfiles'], 'nWorkers': 1}, 'jvmprops': '', 'logfile': '', 'nWorkers': 1, 'nxfassets': '/home/fukudab/workflow_work/.nextflow/assets', 'nxfdockeropts': '&quot;-u 1004&quot;', 'nxfusrmap': '1004', 'optionsChecked': {'withdocker': True, 'nxfusrmap': True, 'nxfdockeropts': True, 'script': False, 'profile': False, 'repo': True, 'outdir': True, 'nxfassets': True, 'configfiles': False, 'jvmprops': False, 'background': False, 'config': True, 'logfile': False, 'quiet': False, 'pipeline': False, 'background1': False, 'parametersfile': False}, 'outdir': '/home/fukudab/workflow_work/nfoutput', 'parametersfile': '', 'pipeline': '', 'profile': '', 'quiet': False, 'repo': 'nf-core/rnaseq -r dev --input /home/fukudab/workflow_work/samplesheet.csv --genome cellranger-GRCh38', 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05(\x00\x00\x00\xf2\x00\x00\n\xf2\x00\x00\x04\xd9\x00\x00\x05(\x00\x00\x01\n\x00\x00\n\xf2\x00\x00\x04\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'script': '', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, 'withdocker': '  ', 'workingdir': '/data/work', '__version__': 1}</properties>
+		<properties format="literal" node_id="1">{'awsdir': '/data/.aws', 'bucket': 'ngi-igenomes', 'controlAreaVisible': True, 'dirs': ['igenomes/Homo_sapiens/NCBI/GRCh38/Annotation/Genes/genes.bed'], 'downloadDir': '/data', 'exportGraphics': False, 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['dirs'], 'nWorkers': 1}, 'key': '', 'nWorkers': 1, 'nthreads': 0, 'optionsChecked': {'nthreads': False, 'key': False, 'secret': False, 'region': False}, 'region': 'us-east-2', 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05=\x00\x00\x013\x00\x00\t%\x00\x00\x03~\x00\x00\x05=\x00\x00\x01K\x00\x00\t%\x00\x00\x03{\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'secret': '', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="pickle" node_id="2">gAN9cQAoWAkAAABPdXRwdXREaXJxAVgKAAAAL2RhdGEvd29ya3ECWAkAAABhY2Nlc3Npb25xA05Y
+BwAAAGFsaWduZWRxBIlYDQAAAGFsaWduZWRSZWdpb25xBVgAAAAAcQZYBQAAAGJ6aXAycQeJWAQA
+AABjbGlwcQiJWBIAAABjb250cm9sQXJlYVZpc2libGVxCYhYCwAAAGRlZmxpbmVRdWFscQpoBlgK
+AAAAZGVmbGluZVNlcXELaAZYCQAAAGRpc2FibGVtdHEMiVgGAAAAZHVtcGNzcQ1oBlgOAAAAZXhw
+b3J0R3JhcGhpY3NxDolYBQAAAGZhc3RhcQ+JWAoAAABmcWR2ZXJzaW9ucRCJWAsAAABncm91cGlu
+RGlyc3ERiVgEAAAAZ3ppcHESiFgHAAAAaGVsaWNvc3ETiVgEAAAAaGVscHEUiVgVAAAAaW5wdXRD
+b25uZWN0aW9uc1N0b3JlcRV9cRZYBwAAAGl0ZXJhdGVxF4hYDwAAAGl0ZXJhdGVTZXR0aW5nc3EY
+fXEZKFgNAAAAaXRlcmFibGVBdHRyc3EaXXEbKFgGAAAAc3JhaWRzcRxYCgAAAHNwb3RHcm91cHNx
+HWVYCAAAAG5Xb3JrZXJzcR5LAlgEAAAAZGF0YXEfY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0CnEg
+KVJxIShYBgAAAHNyYWlkc3EifXEjKFgJAAAAZ3JvdXBTaXplcSRYAQAAADFxJVgHAAAAdGhyZWFk
+c3EmWAEAAAAxcSdYAwAAAHJhbXEoWAEAAAAwcSl1WAoAAABzcG90R3JvdXBzcSp9cSsoaCRYAQAA
+ADFxLGgmWAEAAAAxcS1oKFgBAAAAMHEudXVYDQAAAGl0ZXJhdGVkQXR0cnNxL11xMGgiYXVYCQAA
+AGtlZXBFbXB0eXExiVgLAAAAbGVnYWN5RXJyb3JxMolYCAAAAGxvZ0xldmVscTNLAFgQAAAAbWF0
+ZVBhaXJEaXN0YW5jZXE0aAZYCQAAAG1heFNwb3RJRHE1SwBYCgAAAG1pblJlYWRMZW5xNksAWAkA
+AABtaW5TcG90SURxN0sAaB5LAlgJAAAAbmNiaUVycm9ycTiJWA4AAABvcHRpb25zQ2hlY2tlZHE5
+fXE6KFgJAAAAYWNjZXNzaW9ucTuJWAoAAABmcWR2ZXJzaW9ucTyJWAQAAABoZWxwcT2JWAkAAAB0
+YWJsZU5hbWVxPolYCQAAAHNwbGl0U3BvdHE/iVgJAAAAbWluU3BvdElEcUCJWAkAAABtYXhTcG90
+SURxQYloHYlYBAAAAGNsaXBxQolYCgAAAG1pblJlYWRMZW5xQ4lYCgAAAHJlYWRGaWx0ZXJxRIlY
+CgAAAHF1YWxGaWx0ZXJxRYlYCwAAAHF1YWxGaWx0ZXIxcUaJWAcAAABhbGlnbmVkcUeJWAkAAAB1
+bmFsaWduZWRxSIlYDQAAAGFsaWduZWRSZWdpb25xSYlYEAAAAG1hdGVQYWlyRGlzdGFuY2VxSolY
+CQAAAHVzZVN0ZG91dHFLiVgEAAAAZ3ppcHFMiVgFAAAAYnppcDJxTYlYCgAAAHNwbGl0RmlsZXNx
+TolYBgAAAHNwbGl0M3FPiVgJAAAAc3BvdEdyb3VwcVCJWAsAAABncm91cGluRGlyc3FRiVgJAAAA
+a2VlcEVtcHR5cVKJWAYAAABkdW1wY3NxU4lYBwAAAHFPZmZzZXRxVIlYBQAAAGZhc3RhcVWJWAwA
+AABzdXBwcmVzc1F1YWxxVolYBwAAAG9yaWdmbXRxV4lYBwAAAHJlYWRpZHNxWIlYBwAAAGhlbGlj
+b3NxWYlYCgAAAGRlZmxpbmVTZXFxWolYCwAAAGRlZmxpbmVRdWFscVuJWAkAAABkaXNhYmxlbXRx
+XIlYCAAAAGxvZ0xldmVscV2JWAcAAAB2ZXJib3NlcV6JWAkAAABuY2JpRXJyb3JxX4lYCwAAAGxl
+Z2FjeUVycm9ycWCJdVgHAAAAb3JpZ2ZtdHFhiVgHAAAAcU9mZnNldHFiSyFYCgAAAHF1YWxGaWx0
+ZXJxY0sAWAsAAABxdWFsRmlsdGVyMXFkSwBYCgAAAHJlYWRGaWx0ZXJxZWgGWAcAAAByZWFkaWRz
+cWaJWAcAAABydW5Nb2RlcWdLAFgLAAAAcnVuVHJpZ2dlcnNxaF1xaVgTAAAAc2F2ZWRXaWRnZXRH
+ZW9tZXRyeXFqQzIB2dDLAAIAAAAABZIAAAKuAAAJeQAABXEAAAWSAAACxgAACXkAAAVuAAAAAAAA
+AAAMAHFrWAYAAABzcGxpdDNxbIlYCgAAAHNwbGl0RmlsZXNxbYhYCQAAAHNwbGl0U3BvdHFuiVgJ
+AAAAc3BvdEdyb3VwcW+JWAoAAABzcG90R3JvdXBzcXBdcXFYBgAAAHNyYWlkc3FyXXFzKFgLAAAA
+U1JSMjMzNDg4MjdxdFgLAAAAU1JSMjMzNDg4MjBxdWVYDAAAAHN1cHByZXNzUXVhbHF2iVgJAAAA
+dGFibGVOYW1lcXdoBlgMAAAAdHJpZ2dlclJlYWR5cXh9cXlYCQAAAHVuYWxpZ25lZHF6iVgGAAAA
+dXNlR3B1cXuJWAwAAAB1c2VTY2hlZHVsZXJxfIlYCQAAAHVzZVN0ZG91dHF9iVgHAAAAdmVyYm9z
+ZXF+iVgLAAAAX192ZXJzaW9uX19xf0sBdS4=
+</properties>
+		<properties format="literal" node_id="3">{'URL': ['http://ftp.ensembl.org/pub/release-98/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz', 'http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.primary_assembly.annotation.gtf.gz'], 'concatenateFile': '', 'controlAreaVisible': True, 'decompress': True, 'directory': '/data/genome_cellranger', 'exportGraphics': False, 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['URL'], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'decompress': False, 'concatenateFile': False}, 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03^\x00\x00\x00\xc6\x00\x00\x06\xd4\x00\x00\x02\xad\x00\x00\x03^\x00\x00\x00\xde\x00\x00\x06\xd4\x00\x00\x02\xaa\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="4">{'background1': False, 'command': 'run', 'config': '', 'configfiles': [], 'controlAreaVisible': True, 'exportGraphics': False, 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['configfiles'], 'nWorkers': 1}, 'jvmprops': '', 'logfile': '', 'nWorkers': 1, 'nxfassets': '/home/fukudab/workflow_work/.nextflow/assets', 'nxfdockeropts': '&quot;-u 1004&quot;', 'nxfusrmap': '1004', 'optionsChecked': {'nxfusrmap': True, 'nxfdockeropts': True, 'nxfassets': True, 'configfiles': False, 'jvmprops': False, 'background1': False, 'config': False, 'logfile': False, 'quiet': False, 'repo': True, 'profile': True, 'parametersfile': False, 'script': False, 'withdocker': True, 'pipeline': False, 'outdir': True}, 'outdir': '/home/fukudab/workflow_work/nfoutput', 'parametersfile': '', 'pipeline': '', 'profile': 'test,docker', 'quiet': False, 'repo': 'nf-core/rnaseq -r dev', 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x07n\x00\x00\x01l\x00\x00\x0bE\x00\x00\x03\xe3\x00\x00\x07n\x00\x00\x01\x84\x00\x00\x0bE\x00\x00\x03\xe0\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'script': '', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, 'withdocker': '', 'workingdir': '/data/work', '__version__': 1}</properties>
 	</node_properties>
 </scheme>
