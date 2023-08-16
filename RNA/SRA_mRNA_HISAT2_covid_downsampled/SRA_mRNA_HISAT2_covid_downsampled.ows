@@ -8,10 +8,11 @@
 		<node id="5" name="HISAT2_Index" position="(-891.0, 152.0)" project_name="SRA-mRNA-HISAT2-covid-downsampled" qualified_name="SRA_mRNA_HISAT2_covid_downsampled.OWHISAT2_Index.OWHISAT2_Index" title="HISAT2 Index" version=""/>
 		<node id="6" name="HISAT2_Align" position="(-895.0, 299.0)" project_name="SRA-mRNA-HISAT2-covid-downsampled" qualified_name="SRA_mRNA_HISAT2_covid_downsampled.OWHISAT2_Align.OWHISAT2_Align" title="HISAT2 Align" version=""/>
 		<node id="7" name="featureCounts" position="(-445.0, 290.0)" project_name="SRA-mRNA-HISAT2-covid-downsampled" qualified_name="SRA_mRNA_HISAT2_covid_downsampled.OWfeatureCounts.OWfeatureCounts" title="featureCounts" version=""/>
-		<node id="8" name="Utilities_gnumeric" position="(-314.0, 291.0)" project_name="SRA-mRNA-HISAT2-covid-downsampled" qualified_name="SRA_mRNA_HISAT2_covid_downsampled.OWUtilities_gnumeric.OWUtilities_gnumeric" title="gnumeric" version=""/>
+		<node id="8" name="Utilities_gnumeric" position="(25.0, 313.0)" project_name="SRA-mRNA-HISAT2-covid-downsampled" qualified_name="SRA_mRNA_HISAT2_covid_downsampled.OWUtilities_gnumeric.OWUtilities_gnumeric" title="gnumeric" version=""/>
 		<node id="9" name="fastqDump" position="(-742.0, 10.0)" project_name="SRA-mRNA-HISAT2-covid-downsampled" qualified_name="SRA_mRNA_HISAT2_covid_downsampled.OWfastqDump.OWfastqDump" title="fastqDump" version=""/>
 		<node id="10" name="samtools_samtobam" position="(-750.0, 292.0)" project_name="SRA-mRNA-HISAT2-covid-downsampled" qualified_name="SRA_mRNA_HISAT2_covid_downsampled.OWsamtools_samtobam.OWsamtools_samtobam" title="SAM to BAM" version=""/>
 		<node id="11" name="samtools_sort" position="(-600.0, 292.0)" project_name="SRA-mRNA-HISAT2-covid-downsampled" qualified_name="SRA_mRNA_HISAT2_covid_downsampled.OWsamtools_sort.OWsamtools_sort" title="Sort BAM files" version=""/>
+		<node id="12" name="edgeR_TMMCPM" position="(-251.0, 300.0)" project_name="SRA-mRNA-HISAT2-covid-downsampled" qualified_name="SRA_mRNA_HISAT2_covid_downsampled.OWedgeR_TMMCPM.OWedgeR_TMMCPM" title="EdgeR counts normalization" version=""/>
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="directory" sink_node_id="0" source_channel="genome_dir" source_node_id="1"/>
@@ -23,20 +24,22 @@
 		<link enabled="true" id="6" sink_channel="hisat2_idx" sink_node_id="5" source_channel="hisat2_idx" source_node_id="1"/>
 		<link enabled="true" id="7" sink_channel="hisat2_idx" sink_node_id="6" source_channel="hisat2_idx" source_node_id="5"/>
 		<link enabled="true" id="8" sink_channel="sam_output" sink_node_id="6" source_channel="sam_output" source_node_id="1"/>
-		<link enabled="true" id="9" sink_channel="inputFile" sink_node_id="8" source_channel="counts_output" source_node_id="7"/>
-		<link enabled="true" id="10" sink_channel="mate_2" sink_node_id="6" source_channel="mate_2" source_node_id="1"/>
-		<link enabled="true" id="11" sink_channel="mate_1" sink_node_id="6" source_channel="mate_1" source_node_id="1"/>
-		<link enabled="true" id="12" sink_channel="samFile" sink_node_id="10" source_channel="sam_output" source_node_id="6"/>
-		<link enabled="true" id="13" sink_channel="outputfile" sink_node_id="11" source_channel="sorted_bam_output" source_node_id="1"/>
-		<link enabled="true" id="14" sink_channel="inputfile" sink_node_id="11" source_channel="bam_output" source_node_id="1"/>
-		<link enabled="true" id="15" sink_channel="Trigger" sink_node_id="11" source_channel="fin" source_node_id="10"/>
-		<link enabled="true" id="16" sink_channel="Trigger" sink_node_id="7" source_channel="inputfile" source_node_id="11"/>
-		<link enabled="true" id="17" sink_channel="sambam_input" sink_node_id="7" source_channel="sorted_bam_output" source_node_id="1"/>
-		<link enabled="true" id="18" sink_channel="annotation_gtf" sink_node_id="7" source_channel="annotation_gtf" source_node_id="1"/>
-		<link enabled="true" id="19" sink_channel="Trigger" sink_node_id="6" source_channel="OutputDir" source_node_id="9"/>
-		<link enabled="true" id="20" sink_channel="gzip" sink_node_id="9" source_channel="gzip" source_node_id="1"/>
-		<link enabled="true" id="21" sink_channel="sraids" sink_node_id="9" source_channel="sra_ids" source_node_id="1"/>
-		<link enabled="true" id="22" sink_channel="OutputDir" sink_node_id="9" source_channel="work_dir" source_node_id="1"/>
+		<link enabled="true" id="9" sink_channel="mate_2" sink_node_id="6" source_channel="mate_2" source_node_id="1"/>
+		<link enabled="true" id="10" sink_channel="mate_1" sink_node_id="6" source_channel="mate_1" source_node_id="1"/>
+		<link enabled="true" id="11" sink_channel="samFile" sink_node_id="10" source_channel="sam_output" source_node_id="6"/>
+		<link enabled="true" id="12" sink_channel="outputfile" sink_node_id="11" source_channel="sorted_bam_output" source_node_id="1"/>
+		<link enabled="true" id="13" sink_channel="inputfile" sink_node_id="11" source_channel="bam_output" source_node_id="1"/>
+		<link enabled="true" id="14" sink_channel="Trigger" sink_node_id="11" source_channel="fin" source_node_id="10"/>
+		<link enabled="true" id="15" sink_channel="Trigger" sink_node_id="7" source_channel="inputfile" source_node_id="11"/>
+		<link enabled="true" id="16" sink_channel="sambam_input" sink_node_id="7" source_channel="sorted_bam_output" source_node_id="1"/>
+		<link enabled="true" id="17" sink_channel="annotation_gtf" sink_node_id="7" source_channel="annotation_gtf" source_node_id="1"/>
+		<link enabled="true" id="18" sink_channel="Trigger" sink_node_id="6" source_channel="OutputDir" source_node_id="9"/>
+		<link enabled="true" id="19" sink_channel="gzip" sink_node_id="9" source_channel="gzip" source_node_id="1"/>
+		<link enabled="true" id="20" sink_channel="sraids" sink_node_id="9" source_channel="sra_ids" source_node_id="1"/>
+		<link enabled="true" id="21" sink_channel="OutputDir" sink_node_id="9" source_channel="work_dir" source_node_id="1"/>
+		<link enabled="true" id="22" sink_channel="countsFile" sink_node_id="12" source_channel="counts_output" source_node_id="7"/>
+		<link enabled="true" id="23" sink_channel="inputFile" sink_node_id="8" source_channel="outputFile" source_node_id="12"/>
+		<link enabled="true" id="24" sink_channel="metaFile" sink_node_id="12" source_channel="metafile" source_node_id="1"/>
 	</links>
 	<annotations>
 		<text font-family="Helvetica" font-size="16" id="0" rect="(-1127.0, -11.0, 96.0, 31.0)" type="text/plain">Download</text>
@@ -56,7 +59,7 @@
 		<properties format="pickle" node_id="6">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDgAAAGV4cG9ydEdyYXBoaWNzcQKJWAoA
 AABoaXNhdDJfaWR4cQNYAAAAAHEEWBUAAABpbnB1dENvbm5lY3Rpb25zU3RvcmVxBX1xBihYCgAA
 AGhpc2F0Ml9pZHhxB11xCEsGYVgKAAAAc2FtX291dHB1dHEJXXEKSwFhWAYAAABtYXRlXzJxC11x
-DEsBYVgGAAAAbWF0ZV8xcQ1dcQ5LAWFYBwAAAFRyaWdnZXJxD11xEEsMYXVYBwAAAGl0ZXJhdGVx
+DEsBYVgGAAAAbWF0ZV8xcQ1dcQ5LAWFYBwAAAFRyaWdnZXJxD11xEEsLYXVYBwAAAGl0ZXJhdGVx
 EYhYDwAAAGl0ZXJhdGVTZXR0aW5nc3ESfXETKFgNAAAAaXRlcmFibGVBdHRyc3EUXXEVKFgGAAAA
 bWF0ZV8xcRZYBgAAAG1hdGVfMnEXWAoAAABzYW1fb3V0cHV0cRhYCAAAAHVucGFpcmVkcRlYBgAA
 AHNyYWlkc3EaZVgIAAAAbldvcmtlcnNxG0sEWAQAAABkYXRhcRxjY29sbGVjdGlvbnMKT3JkZXJl
@@ -78,14 +81,14 @@ UV1xUlgMAAAAdHJpZ2dlclJlYWR5cVN9cVQoaEmJaEqJaEuJaEyJaE2JdVgIAAAAdW5wYWlyZWRx
 VV1xVlgGAAAAdXNlR3B1cVeJWAwAAAB1c2VTY2hlZHVsZXJxWIlYCwAAAF9fdmVyc2lvbl9fcVlL
 AXUu
 </properties>
-		<properties format="literal" node_id="7">{'annotation_gtf': '', 'controlAreaVisible': True, 'counts_output': '/data/work/sortedbam_counts.txt', 'exportGraphics': False, 'inputConnectionsStore': {'sam_input': [1], 'Trigger': [11], 'inputfiles': [1], 'sambam_input': [1], 'annotation_gtf': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['sambam_input'], 'nWorkers': 1}, 'nWorkers': 1, 'nthreads': 8, 'optionsChecked': {'File': False, 'paired_end_inputs': False, 'paired_end_reads': False, 'nthreads': True, 'gtf_annotation': True, 'strand_specific': True, 'gtf_attribute': True}, 'paired_end_inputs': True, 'paired_end_reads': True, 'runMode': 2, 'runTriggers': ['annotation_gtf', 'sambam_input', 'Trigger'], 'sambam_input': None, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04%\x00\x00\x01?\x00\x00\x08|\x00\x00\x03\x94\x00\x00\x04%\x00\x00\x01?\x00\x00\x08|\x00\x00\x03\x94\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'annotation_gtf': False, 'sam_input': False, 'inputfiles': False, 'sambam_input': False, 'Trigger': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
-		<properties format="literal" node_id="8">{'controlAreaVisible': True, 'exportGraphics': True, 'inputConnectionsStore': {'inputFile': [8]}, 'inputFile': '', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'inputFile': True}, 'runMode': 2, 'runTriggers': ['inputFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'inputFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="7">{'annotation_gtf': '', 'controlAreaVisible': True, 'counts_output': '/data/work/sortedbam_counts.txt', 'exportGraphics': False, 'inputConnectionsStore': {'sam_input': [1], 'Trigger': [9], 'inputfiles': [1], 'sambam_input': [1], 'annotation_gtf': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['sambam_input'], 'nWorkers': 1}, 'nWorkers': 1, 'nthreads': 8, 'optionsChecked': {'File': False, 'paired_end_inputs': False, 'paired_end_reads': False, 'nthreads': True, 'gtf_annotation': True, 'strand_specific': True, 'gtf_attribute': True}, 'paired_end_inputs': True, 'paired_end_reads': True, 'runMode': 2, 'runTriggers': ['annotation_gtf', 'sambam_input', 'Trigger'], 'sambam_input': None, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04%\x00\x00\x01?\x00\x00\x08|\x00\x00\x03\x94\x00\x00\x04%\x00\x00\x01?\x00\x00\x08|\x00\x00\x03\x94\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'annotation_gtf': False, 'sam_input': False, 'inputfiles': False, 'sambam_input': False, 'Trigger': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="8">{'controlAreaVisible': True, 'exportGraphics': True, 'inputConnectionsStore': {'inputFile': [12]}, 'inputFile': '', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'inputFile': True}, 'runMode': 2, 'runTriggers': ['inputFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'inputFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="pickle" node_id="9">gAN9cQAoWAkAAABPdXRwdXREaXJxAVgAAAAAcQJYCQAAAGFjY2Vzc2lvbnEDaAJYBwAAAGFsaWdu
 ZWRxBIlYDQAAAGFsaWduZWRSZWdpb25xBWgCWAUAAABiemlwMnEGiVgEAAAAY2xpcHEHiVgSAAAA
 Y29udHJvbEFyZWFWaXNpYmxlcQiIWAsAAABkZWZsaW5lUXVhbHEJaAJYCgAAAGRlZmxpbmVTZXFx
 CmgCWAkAAABkaXNhYmxlbXRxC4lYBgAAAGR1bXBjc3EMaAJYDgAAAGV4cG9ydEdyYXBoaWNzcQ2J
 WAUAAABmYXN0YXEOiVgKAAAAZnFkdmVyc2lvbnEPiVgLAAAAZ3JvdXBpbkRpcnNxEIlYBAAAAGd6
-aXBxEYhYBwAAAGhlbGljb3NxEolYBAAAAGhlbHBxE4lYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9y
+aXBxEU5YBwAAAGhlbGljb3NxEolYBAAAAGhlbHBxE4lYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9y
 ZXEUfXEVKFgEAAAAZ3ppcHEWXXEXSwFhWAYAAABzcmFpZHNxGF1xGUsBYVgJAAAAT3V0cHV0RGly
 cRpdcRtLAWF1WAcAAABpdGVyYXRlcRyIWA8AAABpdGVyYXRlU2V0dGluZ3NxHX1xHihYDQAAAGl0
 ZXJhYmxlQXR0cnNxH11xIChYBgAAAHNyYWlkc3EhWAoAAABzcG90R3JvdXBzcSJlWAQAAABkYXRh
@@ -133,7 +136,7 @@ KUsBdS4=
 </properties>
 		<properties format="pickle" node_id="11">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDgAAAGV4cG9ydEdyYXBoaWNzcQKJWAYA
 AABmb3JtYXRxA1gAAAAAcQRYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXEFfXEGKFgKAAAAb3V0
-cHV0ZmlsZXEHXXEISwFhWAkAAABpbnB1dGZpbGVxCV1xCksBYVgHAAAAVHJpZ2dlcnELXXEMSwph
+cHV0ZmlsZXEHXXEISwFhWAkAAABpbnB1dGZpbGVxCV1xCksBYVgHAAAAVHJpZ2dlcnELXXEMSwhh
 dVgJAAAAaW5wdXRmaWxlcQ1OWAcAAABpdGVyYXRlcQ6IWA8AAABpdGVyYXRlU2V0dGluZ3NxD31x
 EChYDQAAAGl0ZXJhYmxlQXR0cnNxEV1xEihYCQAAAGlucHV0ZmlsZXETWAoAAABvdXRwdXRmaWxl
 cRRlWAQAAABkYXRhcRVjY29sbGVjdGlvbnMKT3JkZXJlZERpY3QKcRYpUnEXKFgJAAAAaW5wdXRm
@@ -149,5 +152,6 @@ ZGdldEdlb21ldHJ5cThDMgHZ0MsAAgAAAAAFkgAAApYAAAmSAAAEagAABZIAAAKuAAAJkgAABGcA
 AAAAAAAAAAwAcTlYDAAAAHRyaWdnZXJSZWFkeXE6fXE7KGg1iWg2iWg3iXVYBgAAAHVzZUdwdXE8
 iVgMAAAAdXNlU2NoZWR1bGVycT2JWAsAAABfX3ZlcnNpb25fX3E+SwF1Lg==
 </properties>
+		<properties format="literal" node_id="12">{'controlAreaVisible': True, 'countsFile': '', 'exportGraphics': False, 'inputConnectionsStore': {'countsFile': [10], 'metaFile': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'metaFile': '', 'nWorkers': 1, 'optionsChecked': {'File': False}, 'outputFile': '/data/work/normalized_counts.txt', 'runMode': 2, 'runTriggers': ['metaFile', 'countsFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x92\x00\x00\x02\x96\x00\x00\t\x02\x00\x00\x04\xa9\x00\x00\x05\x92\x00\x00\x02\xae\x00\x00\t\x02\x00\x00\x04\xa6\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'metaFile': False, 'countsFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 	</node_properties>
 </scheme>
