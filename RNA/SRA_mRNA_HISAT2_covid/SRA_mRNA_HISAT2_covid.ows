@@ -52,36 +52,36 @@
 		<properties format="pickle" node_id="6">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDgAAAGV4cG9ydEdyYXBoaWNzcQKJWAoA
 AABoaXNhdDJfaWR4cQNYAAAAAHEEWBUAAABpbnB1dENvbm5lY3Rpb25zU3RvcmVxBX1xBihYCgAA
 AGhpc2F0Ml9pZHhxB11xCEsGYVgKAAAAc2FtX291dHB1dHEJXXEKSwFhWAYAAABtYXRlXzJxC11x
-DEsBYVgGAAAAbWF0ZV8xcQ1dcQ5LAWFYBwAAAFRyaWdnZXJxD11xEEsLYXVYBwAAAGl0ZXJhdGVx
-EYhYDwAAAGl0ZXJhdGVTZXR0aW5nc3ESfXETKFgNAAAAaXRlcmFibGVBdHRyc3EUXXEVKFgGAAAA
-bWF0ZV8xcRZYBgAAAG1hdGVfMnEXWAoAAABzYW1fb3V0cHV0cRhYCAAAAHVucGFpcmVkcRlYBgAA
-AHNyYWlkc3EaZVgIAAAAbldvcmtlcnNxG0sEWAQAAABkYXRhcRxjY29sbGVjdGlvbnMKT3JkZXJl
-ZERpY3QKcR0pUnEeKFgGAAAAbWF0ZV8xcR99cSAoWAkAAABncm91cFNpemVxIVgBAAAAMXEiWAcA
-AAB0aHJlYWRzcSNoIlgDAAAAcmFtcSRYAQAAADBxJXVYBgAAAG1hdGVfMnEmfXEnKGghaCJoI2gi
-aCRoJXVYCgAAAHNhbV9vdXRwdXRxKH1xKShoIWgiaCNoImgkaCV1WAgAAAB1bnBhaXJlZHEqfXEr
-KGghaCJoI2giaCRoJXVYBgAAAHNyYWlkc3EsfXEtKGghaCJoI2giaCRoJXV1WA0AAABpdGVyYXRl
-ZEF0dHJzcS5dcS8oaB9oJmgoaCpoLGV1WAYAAABtYXRlXzFxME5YBgAAAG1hdGVfMnExTlgIAAAA
-bldvcmtlcnNxMksEWAgAAABudGhyZWFkc3EzSwhYDgAAAG9wdGlvbnNDaGVja2VkcTR9cTUoWAYA
-AABtYXRlXzFxNohYBgAAAG1hdGVfMnE3iFgIAAAAdW5wYWlyZWRxOIlYBgAAAHNyYWlkc3E5iVgI
-AAAAbnRocmVhZHNxOohYBAAAAHNraXBxO4lYBAAAAHVwdG9xPIlYBQAAAHRyaW01cT2JWAUAAAB0
-cmltM3E+iVgHAAAAcGhyZWQzM3E/iVgHAAAAcGhyZWQ2NHFAiVgMAAAAc29sZXhhX3F1YWxzcUGJ
-WAkAAABpbnRfcXVhbHNxQolYDAAAAGlnbm9yZV9xdWFsc3FDiVgEAAAAbm9md3FEiVgEAAAAbm9y
-Y3FFiXVYBwAAAHJ1bk1vZGVxRksCWAsAAABydW5UcmlnZ2Vyc3FHXXFIKFgGAAAAbWF0ZV8xcUlY
-BgAAAG1hdGVfMnFKWAoAAABzYW1fb3V0cHV0cUtYCgAAAGhpc2F0Ml9pZHhxTFgHAAAAVHJpZ2dl
-cnFNZVgKAAAAc2FtX291dHB1dHFOTlgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXFPQzIB2dDLAAIA
-AAAAA8YAAADyAAAIUgAABBwAAAPGAAAA8gAACFIAAAQcAAAAAAAAAAAMAHFQWAYAAABzcmFpZHNx
-UV1xUlgMAAAAdHJpZ2dlclJlYWR5cVN9cVQoaEmJaEqJaEuJaEyJaE2JdVgIAAAAdW5wYWlyZWRx
-VV1xVlgGAAAAdXNlR3B1cVeJWAwAAAB1c2VTY2hlZHVsZXJxWIlYCwAAAF9fdmVyc2lvbl9fcVlL
-AXUu
+DEsBYVgGAAAAbWF0ZV8xcQ1dcQ5LAWFYBwAAAFRyaWdnZXJxD11xEChLC0sJZXVYBwAAAGl0ZXJh
+dGVxEYhYDwAAAGl0ZXJhdGVTZXR0aW5nc3ESfXETKFgNAAAAaXRlcmFibGVBdHRyc3EUXXEVKFgG
+AAAAbWF0ZV8xcRZYBgAAAG1hdGVfMnEXWAoAAABzYW1fb3V0cHV0cRhYCAAAAHVucGFpcmVkcRlY
+BgAAAHNyYWlkc3EaZVgIAAAAbldvcmtlcnNxG0sEWAQAAABkYXRhcRxjY29sbGVjdGlvbnMKT3Jk
+ZXJlZERpY3QKcR0pUnEeKFgGAAAAbWF0ZV8xcR99cSAoWAkAAABncm91cFNpemVxIVgBAAAAMXEi
+WAcAAAB0aHJlYWRzcSNoIlgDAAAAcmFtcSRYAQAAADBxJXVYBgAAAG1hdGVfMnEmfXEnKGghaCJo
+I2giaCRoJXVYCgAAAHNhbV9vdXRwdXRxKH1xKShoIWgiaCNoImgkaCV1WAgAAAB1bnBhaXJlZHEq
+fXErKGghaCJoI2giaCRoJXVYBgAAAHNyYWlkc3EsfXEtKGghaCJoI2giaCRoJXV1WA0AAABpdGVy
+YXRlZEF0dHJzcS5dcS8oaB9oJmgoaCpoLGV1WAYAAABtYXRlXzFxME5YBgAAAG1hdGVfMnExTlgI
+AAAAbldvcmtlcnNxMksEWAgAAABudGhyZWFkc3EzSwhYDgAAAG9wdGlvbnNDaGVja2VkcTR9cTUo
+WAYAAABtYXRlXzFxNohYBgAAAG1hdGVfMnE3iFgIAAAAdW5wYWlyZWRxOIlYBgAAAHNyYWlkc3E5
+iVgIAAAAbnRocmVhZHNxOohYBAAAAHNraXBxO4lYBAAAAHVwdG9xPIlYBQAAAHRyaW01cT2JWAUA
+AAB0cmltM3E+iVgHAAAAcGhyZWQzM3E/iVgHAAAAcGhyZWQ2NHFAiVgMAAAAc29sZXhhX3F1YWxz
+cUGJWAkAAABpbnRfcXVhbHNxQolYDAAAAGlnbm9yZV9xdWFsc3FDiVgEAAAAbm9md3FEiVgEAAAA
+bm9yY3FFiXVYBwAAAHJ1bk1vZGVxRksCWAsAAABydW5UcmlnZ2Vyc3FHXXFIKFgGAAAAbWF0ZV8x
+cUlYBgAAAG1hdGVfMnFKWAoAAABzYW1fb3V0cHV0cUtYCgAAAGhpc2F0Ml9pZHhxTFgHAAAAVHJp
+Z2dlcnFNZVgKAAAAc2FtX291dHB1dHFOTlgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXFPQzIB2dDL
+AAIAAAAAA8YAAADyAAAIUgAABBwAAAPGAAAA8gAACFIAAAQcAAAAAAAAAAAMAHFQWAYAAABzcmFp
+ZHNxUV1xUlgMAAAAdHJpZ2dlclJlYWR5cVN9cVQoaEmJaEqJaEuJaEyJaE2JdVgIAAAAdW5wYWly
+ZWRxVV1xVlgGAAAAdXNlR3B1cVeJWAwAAAB1c2VTY2hlZHVsZXJxWIlYCwAAAF9fdmVyc2lvbl9f
+cVlLAXUu
 </properties>
-		<properties format="literal" node_id="7">{'annotation_gtf': '', 'controlAreaVisible': True, 'counts_output': '/data/work/sortedbam_counts.txt', 'exportGraphics': False, 'inputConnectionsStore': {'sam_input': [1], 'inputfiles': [1], 'annotation_gtf': [1], 'sambam_input': [7]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['sambam_input'], 'nWorkers': 1}, 'nWorkers': 1, 'nthreads': 8, 'optionsChecked': {'File': False, 'paired_end_inputs': False, 'paired_end_reads': False, 'nthreads': True, 'gtf_annotation': True, 'strand_specific': True, 'gtf_attribute': True}, 'paired_end_inputs': True, 'paired_end_reads': True, 'runMode': 2, 'runTriggers': ['annotation_gtf', 'sambam_input', 'Trigger'], 'sambam_input': None, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04%\x00\x00\x01?\x00\x00\x08|\x00\x00\x03\x94\x00\x00\x04%\x00\x00\x01?\x00\x00\x08|\x00\x00\x03\x94\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'annotation_gtf': False, 'sam_input': False, 'inputfiles': False, 'sambam_input': False, 'Trigger': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
-		<properties format="literal" node_id="8">{'controlAreaVisible': True, 'exportGraphics': True, 'inputConnectionsStore': {'inputFile': [12]}, 'inputFile': '', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'inputFile': True}, 'runMode': 2, 'runTriggers': ['inputFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'inputFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="7">{'annotation_gtf': '', 'controlAreaVisible': True, 'counts_output': '/data/work/sortedbam_counts.txt', 'exportGraphics': False, 'inputConnectionsStore': {'sam_input': [1], 'inputfiles': [1], 'annotation_gtf': [1], 'sambam_input': [7]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['sambam_input'], 'nWorkers': 1}, 'nWorkers': 1, 'nthreads': 8, 'optionsChecked': {'File': False, 'paired_end_inputs': False, 'paired_end_reads': False, 'nthreads': True, 'gtf_annotation': True, 'strand_specific': True, 'gtf_attribute': True}, 'paired_end_inputs': True, 'paired_end_reads': True, 'runMode': 2, 'runTriggers': ['annotation_gtf', 'sambam_input'], 'sambam_input': None, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04%\x00\x00\x01?\x00\x00\x08|\x00\x00\x03\x94\x00\x00\x04%\x00\x00\x01?\x00\x00\x08|\x00\x00\x03\x94\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'annotation_gtf': False, 'sam_input': False, 'inputfiles': False, 'sambam_input': False, 'Trigger': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="8">{'controlAreaVisible': True, 'exportGraphics': True, 'inputConnectionsStore': {'inputFile': [12, 10]}, 'inputFile': '', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'inputFile': True}, 'runMode': 2, 'runTriggers': ['inputFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'inputFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="pickle" node_id="9">gAN9cQAoWAkAAABPdXRwdXREaXJxAVgAAAAAcQJYCQAAAGFjY2Vzc2lvbnEDaAJYBwAAAGFsaWdu
 ZWRxBIlYDQAAAGFsaWduZWRSZWdpb25xBWgCWAUAAABiemlwMnEGiVgEAAAAY2xpcHEHiVgSAAAA
 Y29udHJvbEFyZWFWaXNpYmxlcQiIWAsAAABkZWZsaW5lUXVhbHEJaAJYCgAAAGRlZmxpbmVTZXFx
 CmgCWAkAAABkaXNhYmxlbXRxC4lYBgAAAGR1bXBjc3EMaAJYDgAAAGV4cG9ydEdyYXBoaWNzcQ2J
 WAUAAABmYXN0YXEOiVgKAAAAZnFkdmVyc2lvbnEPiVgLAAAAZ3JvdXBpbkRpcnNxEIlYBAAAAGd6
-aXBxEU5YBwAAAGhlbGljb3NxEolYBAAAAGhlbHBxE4lYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9y
+aXBxEYhYBwAAAGhlbGljb3NxEolYBAAAAGhlbHBxE4lYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9y
 ZXEUfXEVKFgEAAAAZ3ppcHEWXXEXSwFhWAYAAABzcmFpZHNxGF1xGUsBYVgJAAAAT3V0cHV0RGly
 cRpdcRtLAWF1WAcAAABpdGVyYXRlcRyIWA8AAABpdGVyYXRlU2V0dGluZ3NxHX1xHihYDQAAAGl0
 ZXJhYmxlQXR0cnNxH11xIChYBgAAAHNyYWlkc3EhWAoAAABzcG90R3JvdXBzcSJlWAQAAABkYXRh
@@ -114,6 +114,6 @@ TmFtZXF6aAJYDAAAAHRyaWdnZXJSZWFkeXF7fXF8KGhtiWhuiWhviXVYCQAAAHVuYWxpZ25lZHF9
 iVgGAAAAdXNlR3B1cX6JWAwAAAB1c2VTY2hlZHVsZXJxf4lYCQAAAHVzZVN0ZG91dHGAiVgHAAAA
 dmVyYm9zZXGBiVgLAAAAX192ZXJzaW9uX19xgksBdS4=
 </properties>
-		<properties format="literal" node_id="10">{'controlAreaVisible': True, 'countsFile': '', 'exportGraphics': False, 'inputConnectionsStore': {'countsFile': [10], 'metaFile': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'metaFile': '', 'nWorkers': 1, 'optionsChecked': {'File': False}, 'outputFile': '/data/work/normalized_counts.txt', 'runMode': 2, 'runTriggers': ['metaFile', 'countsFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x92\x00\x00\x02\x96\x00\x00\t\x02\x00\x00\x04\xa9\x00\x00\x05\x92\x00\x00\x02\xae\x00\x00\t\x02\x00\x00\x04\xa6\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'metaFile': False, 'countsFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="10">{'controlAreaVisible': True, 'countsFile': '', 'exportGraphics': False, 'inputConnectionsStore': {'countsFile': [10, 8], 'metaFile': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'metaFile': '', 'nWorkers': 1, 'optionsChecked': {'File': False}, 'outputFile': '/data/work/normalized_counts.txt', 'runMode': 2, 'runTriggers': ['metaFile', 'countsFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x92\x00\x00\x02\x96\x00\x00\t\x02\x00\x00\x04\xa9\x00\x00\x05\x92\x00\x00\x02\xae\x00\x00\t\x02\x00\x00\x04\xa6\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'metaFile': False, 'countsFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 	</node_properties>
 </scheme>
