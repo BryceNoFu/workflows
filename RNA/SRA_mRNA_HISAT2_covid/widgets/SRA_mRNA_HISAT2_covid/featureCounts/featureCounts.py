@@ -34,6 +34,9 @@ class OWfeatureCounts(OWBwBWidget):
     paired_end_inputs=pset(False)
     paired_end_reads=pset(False)
     nthreads=pset(None)
+    gtf_annotation=pset(None)
+    gtf_attribute=pset(None)
+    strand_specific=pset(1)
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"featureCounts")) as f:
