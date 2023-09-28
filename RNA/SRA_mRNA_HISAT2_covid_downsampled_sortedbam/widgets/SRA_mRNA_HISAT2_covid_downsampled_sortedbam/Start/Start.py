@@ -44,6 +44,7 @@ class OWStart(OWBwBWidget):
     sraidswt=pset([])
     metafile=pset([])
     sraidsmutant=pset([])
+    sorted_sam_output=pset([])
     def __init__(self):
         super().__init__(self.docker_image_name, self.docker_image_tag)
         with open(getJsonName(__file__,"Start")) as f:
