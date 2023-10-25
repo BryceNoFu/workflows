@@ -19,7 +19,7 @@ class OWSalmonQuant(OWBwBWidget):
     want_main_area = False
     docker_image_name = "combinelab/salmon"
     docker_image_tag = "1.10.2"
-    inputs = [("index",str,"handleInputsindex"),("trigger",str,"handleInputstrigger")]
+    inputs = [("index",str,"handleInputsindex"),("trigger",str,"handleInputstrigger"),("mates1",str,"handleInputsmates1"),("mates2",str,"handleInputsmates2"),("unmatedReads",str,"handleInputsunmatedReads"),("outputDirs",str,"handleInputsoutputDirs")]
     outputs = [("trigger",str)]
     pset=functools.partial(settings.Setting,schema_only=True)
     runMode=pset(0)
@@ -33,7 +33,7 @@ class OWSalmonQuant(OWBwBWidget):
     mates1=pset([])
     mates2=pset([])
     unmatedReads=pset([])
-    outputDir=pset([])
+    outputDirs=pset([])
     nThreads=pset(2)
     geneMap=pset(None)
     def __init__(self):
@@ -52,6 +52,26 @@ class OWSalmonQuant(OWBwBWidget):
     def handleInputstrigger(self, value, *args):
         if args and len(args) > 0: 
             self.handleInputs("trigger", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsmates1(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("mates1", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsmates2(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("mates2", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsunmatedReads(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("unmatedReads", value, args[0][0], test=args[0][3])
+        else:
+            self.handleInputs("inputFile", value, None, False)
+    def handleInputsoutputDirs(self, value, *args):
+        if args and len(args) > 0: 
+            self.handleInputs("outputDirs", value, args[0][0], test=args[0][3])
         else:
             self.handleInputs("inputFile", value, None, False)
     def handleOutputs(self):
