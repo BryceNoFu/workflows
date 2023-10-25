@@ -49,26 +49,26 @@
 		<properties format="literal" node_id="2">{'URL': ['https://github.com/BryceNoFu/CRDC-files-bwbworkflows/files/10206146/published.counts.files.zip', 'https://github.com/BryceNoFu/CRDC-files-bwbworkflows/files/10839319/Gencode.v36.gene.ensembl.and.symbols.csv'], 'concatenateFile': '', 'controlAreaVisible': True, 'decompress': True, 'directory': '', 'exportGraphics': False, 'inputConnectionsStore': {'directory': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['URL'], 'nWorkers': 1}, 'nWorkers': 1, 'noClobber': False, 'optionsChecked': {'decompress': False, 'concatenateFile': False, 'noClobber': False}, 'runMode': 0, 'runTriggers': ['directory'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03\xd7\x00\x00\x00\x88\x00\x00\x08\xd7\x00\x00\x02\xb8\x00\x00\x03\xd7\x00\x00\x00\x88\x00\x00\x08\xd7\x00\x00\x02\xb8\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'directory': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="literal" node_id="3">{'allowRoot': False, 'autoyes': False, 'browser': '', 'certfile': '', 'clientca': '', 'config': '', 'controlAreaVisible': True, 'debug': False, 'execute': True, 'exportGraphics': True, 'generateConfig': False, 'inputConnectionsStore': {'InputDir': [3]}, 'ip': '0.0.0.0', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'keyfile': '', 'loglevel': '30', 'nWorkers': 1, 'nomathjax': False, 'optionsChecked': {'execute': False, 'startingNotebook': True, 'type': True, 'outputNotebook': True, 'debug': False, 'generateConfig': False, 'autoyes': False, 'allowRoot': False, 'loglevel': False, 'config': False, 'transport': False, 'keyfile': False, 'certfile': False, 'clientca': False, 'nomathjax': False, 'browser': False}, 'outputNotebook': '/data/work/GTEx_vs_GDC_AML_DESeq2_executed.ipynb', 'port': 8888, 'runMode': 0, 'runTriggers': ['Trigger', 'InputDir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03\xcc\x00\x00\x01(\x00\x00\x06\xdd\x00\x00\x03\x91\x00\x00\x03\xcc\x00\x00\x01@\x00\x00\x06\xdd\x00\x00\x03\x8e\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'startingNotebook': '/data/work/GTEx_vs_GDC_AML_DESeq2.ipynb', 'subcommand': 'nbconvert', 'transport': '', 'triggerReady': {'Trigger': False, 'startingNotebook': False, 'InputDir': False}, 'type': 'notebook', 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="literal" node_id="4">{'allowRoot': True, 'autoyes': True, 'browser': '', 'certfile': '', 'clientca': '', 'config': '', 'controlAreaVisible': True, 'debug': False, 'execute': False, 'exportGraphics': True, 'generateConfig': False, 'inputConnectionsStore': {'startingNotebook': [4]}, 'ip': '0.0.0.0', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'keyfile': '', 'loglevel': '30', 'nWorkers': 1, 'nomathjax': False, 'optionsChecked': {'execute': False, 'startingNotebook': True, 'type': False, 'outputNotebook': False, 'debug': False, 'generateConfig': False, 'autoyes': False, 'allowRoot': False, 'loglevel': False, 'config': False, 'transport': False, 'keyfile': False, 'certfile': False, 'clientca': False, 'nomathjax': False, 'browser': False}, 'outputNotebook': '', 'port': 8888, 'runMode': 2, 'runTriggers': ['startingNotebook'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x1c\x00\x00\x01`\x00\x00\x08\x08\x00\x00\x03l\x00\x00\x05\x1c\x00\x00\x01`\x00\x00\x08\x08\x00\x00\x03l\x00\x00\x00\x00\x00\x00\x00\x00\n\x00', 'startingNotebook': '', 'subcommand': 'notebook', 'transport': '', 'triggerReady': {'Trigger': False, 'startingNotebook': False}, 'type': 'notebook', 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
-		<properties format="literal" node_id="5">{'controlAreaVisible': True, 'exportGraphics': True, 'inputConnectionsStore': {'inputFile': [7, 6]}, 'inputFile': '', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'inputFile': True}, 'runMode': 2, 'runTriggers': ['inputFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'inputFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="5">{'controlAreaVisible': True, 'exportGraphics': True, 'inputConnectionsStore': {'inputFile': [6]}, 'inputFile': '', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'inputFile': True}, 'runMode': 2, 'runTriggers': ['inputFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x04\x92\x00\x00\x02!\x00\x00\x07~\x00\x00\x03#\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'inputFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="pickle" node_id="6">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDgAAAGV4cG9ydEdyYXBoaWNzcQKJWAYA
 AABmb3JtYXRxA1gDAAAAc2FtcQRYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXEFfXEGKFgJAAAA
-aW5wdXRmaWxlcQddcQgoSwtLCmVYCgAAAG91dHB1dGZpbGVxCV1xCksBYXVYCQAAAGlucHV0Zmls
-ZXELTlgHAAAAaXRlcmF0ZXEMiFgPAAAAaXRlcmF0ZVNldHRpbmdzcQ19cQ4oWA0AAABpdGVyYWJs
-ZUF0dHJzcQ9dcRAoWAkAAABpbnB1dGZpbGVxEVgKAAAAb3V0cHV0ZmlsZXESZVgEAAAAZGF0YXET
-Y2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0CnEUKVJxFShYCQAAAGlucHV0ZmlsZXEWfXEXKFgJAAAA
-Z3JvdXBTaXplcRhYAQAAADFxGVgHAAAAdGhyZWFkc3EaaBlYAwAAAHJhbXEbWAEAAAAwcRx1WAoA
-AABvdXRwdXRmaWxlcR19cR4oaBhoGWgaaBloG2gcdXVYDQAAAGl0ZXJhdGVkQXR0cnNxH11xICho
-FmgdZVgIAAAAbldvcmtlcnNxIUsEdVgGAAAAbWF4UkFNcSJLAFgIAAAAbldvcmtlcnNxI0sEWAQA
-AABub3BncSSJWAgAAABudGhyZWFkc3ElSwBYDgAAAG9wdGlvbnNDaGVja2VkcSZ9cScoWAoAAABv
-dXRwdXRmaWxlcSiIWAYAAABmb3JtYXRxKYhYBgAAAHByZWZpeHEqiVgIAAAAbnRocmVhZHNxK4lY
-BAAAAG5vcGdxLIlYBgAAAG1heFJBTXEtiXVYCgAAAG91dHB1dGZpbGVxLk5YBgAAAHByZWZpeHEv
-WAAAAABxMFgHAAAAcnVuTW9kZXExSwJYCwAAAHJ1blRyaWdnZXJzcTJdcTMoWAkAAABpbnB1dGZp
-bGVxNFgKAAAAb3V0cHV0ZmlsZXE1ZVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXE2QzIB2dDLAAIA
-AAAABkoAAAFWAAAK4wAAA/MAAAZKAAABbgAACuMAAAPwAAAAAAAAAAAMAHE3WAwAAAB0cmlnZ2Vy
-UmVhZHlxOH1xOShoNIloNYlYBwAAAFRyaWdnZXJxOol1WAYAAAB1c2VHcHVxO4lYDAAAAHVzZVNj
-aGVkdWxlcnE8iVgLAAAAX192ZXJzaW9uX19xPUsBdS4=
+aW5wdXRmaWxlcQddcQhLCmFYCgAAAG91dHB1dGZpbGVxCV1xCksBYXVYCQAAAGlucHV0ZmlsZXEL
+TlgHAAAAaXRlcmF0ZXEMiFgPAAAAaXRlcmF0ZVNldHRpbmdzcQ19cQ4oWA0AAABpdGVyYWJsZUF0
+dHJzcQ9dcRAoWAkAAABpbnB1dGZpbGVxEVgKAAAAb3V0cHV0ZmlsZXESZVgEAAAAZGF0YXETY2Nv
+bGxlY3Rpb25zCk9yZGVyZWREaWN0CnEUKVJxFShYCQAAAGlucHV0ZmlsZXEWfXEXKFgJAAAAZ3Jv
+dXBTaXplcRhYAQAAADFxGVgHAAAAdGhyZWFkc3EaaBlYAwAAAHJhbXEbWAEAAAAwcRx1WAoAAABv
+dXRwdXRmaWxlcR19cR4oaBhoGWgaaBloG2gcdXVYDQAAAGl0ZXJhdGVkQXR0cnNxH11xIChoFmgd
+ZVgIAAAAbldvcmtlcnNxIUsEdVgGAAAAbWF4UkFNcSJLAFgIAAAAbldvcmtlcnNxI0sEWAQAAABu
+b3BncSSJWAgAAABudGhyZWFkc3ElSwBYDgAAAG9wdGlvbnNDaGVja2VkcSZ9cScoWAoAAABvdXRw
+dXRmaWxlcSiIWAYAAABmb3JtYXRxKYhYBgAAAHByZWZpeHEqiVgIAAAAbnRocmVhZHNxK4lYBAAA
+AG5vcGdxLIlYBgAAAG1heFJBTXEtiXVYCgAAAG91dHB1dGZpbGVxLk5YBgAAAHByZWZpeHEvWAAA
+AABxMFgHAAAAcnVuTW9kZXExSwJYCwAAAHJ1blRyaWdnZXJzcTJdcTMoWAkAAABpbnB1dGZpbGVx
+NFgKAAAAb3V0cHV0ZmlsZXE1ZVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXE2QzIB2dDLAAIAAAAA
+BkoAAAFWAAAK4wAAA/MAAAZKAAABbgAACuMAAAPwAAAAAAAAAAAMAHE3WAwAAAB0cmlnZ2VyUmVh
+ZHlxOH1xOShoNIloNYlYBwAAAFRyaWdnZXJxOol1WAYAAAB1c2VHcHVxO4lYDAAAAHVzZVNjaGVk
+dWxlcnE8iVgLAAAAX192ZXJzaW9uX19xPUsBdS4=
 </properties>
-		<properties format="literal" node_id="7">{'controlAreaVisible': True, 'countsFile': '', 'exportGraphics': False, 'inputConnectionsStore': {'metaFile': [1], 'countsFile': [12, 11]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'metaFile': '', 'nWorkers': 1, 'optionsChecked': {'File': False}, 'outputFile': '/data/work/normalized_counts.txt', 'runMode': 2, 'runTriggers': ['metaFile', 'countsFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x92\x00\x00\x02~\x00\x00\t\x02\x00\x00\x04v\x00\x00\x05\x92\x00\x00\x02~\x00\x00\t\x02\x00\x00\x04v\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'metaFile': False, 'countsFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="7">{'controlAreaVisible': True, 'countsFile': '', 'exportGraphics': False, 'inputConnectionsStore': {'metaFile': [1], 'countsFile': [11]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'metaFile': '', 'nWorkers': 1, 'optionsChecked': {'File': False}, 'outputFile': '/data/work/normalized_counts.txt', 'runMode': 2, 'runTriggers': ['metaFile', 'countsFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x92\x00\x00\x02~\x00\x00\t\x02\x00\x00\x04v\x00\x00\x05\x92\x00\x00\x02~\x00\x00\t\x02\x00\x00\x04v\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'metaFile': False, 'countsFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="pickle" node_id="8">gAN9cQAoWAMAAABVUkxxAV1xAihYVQAAAGh0dHBzOi8vZHJpdmUuZ29vZ2xlLmNvbS9maWxlL2Qv
 MUU4SnhfdWFHQjE4ZTh4T2tUQ0t0QnpCY0NKRHAwTWhYL3ZpZXc/dXNwPWRyaXZlX2xpbmtxA1hV
 AAAAaHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8xMzVVeFlDdnI1SnNSRGRfMTliQkNt
@@ -113,39 +113,39 @@ cUFLAXUu
 		<properties format="literal" node_id="9">{'bmax': 0, 'bmaxdivn': 0, 'controlAreaVisible': True, 'cutoff': 0, 'dcv': 0, 'exon': '', 'exportGraphics': False, 'ftabchars': 0, 'haplotype': '', 'hisat2_idx': '', 'inputConnectionsStore': {'hisat2_idx': [1], 'reference_in': [1], 'Trigger': [2]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'justref': False, 'large_index': False, 'local_ftabchars': 0, 'local_offrate': 0, 'nWorkers': 1, 'no_auto': False, 'nodc': False, 'noref': False, 'nthreads': 8, 'offrate': 0, 'optionsChecked': {'nthreads': True, 'large_index': False, 'no_auto': False, 'bmax': False, 'bmaxdivn': False, 'dcv': False, 'nodc': False, 'noref': False, 'justref': False, 'offrate': False, 'local_offrate': False, 'ftabchars': False, 'local_ftabchars': False, 'snp': False, 'haplotype': False, 'seed': False, 'ss': False, 'exon': False, 'cutoff': False, 'quiet': False}, 'quiet': False, 'reference_in': '', 'runMode': 2, 'runTriggers': ['Trigger', 'reference_in', 'hisat2_idx'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x92\x00\x00\x02\xae\x00\x00\x08\xc1\x00\x00\x04v\x00\x00\x05\x92\x00\x00\x02\xc6\x00\x00\x08\xc1\x00\x00\x04s\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'seed': 0, 'snp': '', 'ss': '', 'triggerReady': {'Trigger': False, 'reference_in': False, 'hisat2_idx': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="pickle" node_id="10">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDgAAAGV4cG9ydEdyYXBoaWNzcQKJWAoA
 AABoaXNhdDJfaWR4cQNYAAAAAHEEWAwAAABpZ25vcmVfcXVhbHNxBYlYFQAAAGlucHV0Q29ubmVj
-dGlvbnNTdG9yZXEGfXEHKFgHAAAAVHJpZ2dlcnEIXXEJKEsJSwhlWAoAAABzYW1fb3V0cHV0cQpd
-cQtLAWFYBgAAAG1hdGVfMXEMXXENSwFhWAYAAABtYXRlXzJxDl1xD0sBYVgKAAAAaGlzYXQyX2lk
-eHEQXXERKEsKSwlldVgJAAAAaW50X3F1YWxzcRKJWAcAAABpdGVyYXRlcROIWA8AAABpdGVyYXRl
-U2V0dGluZ3NxFH1xFShYDQAAAGl0ZXJhYmxlQXR0cnNxFl1xFyhYBgAAAG1hdGVfMXEYWAYAAABt
-YXRlXzJxGVgKAAAAc2FtX291dHB1dHEaWAgAAAB1bnBhaXJlZHEbWAYAAABzcmFpZHNxHGVYCAAA
-AG5Xb3JrZXJzcR1LCFgEAAAAZGF0YXEeY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0CnEfKVJxIChY
-BgAAAG1hdGVfMXEhfXEiKFgJAAAAZ3JvdXBTaXplcSNYAQAAADFxJFgHAAAAdGhyZWFkc3ElaCRY
-AwAAAHJhbXEmWAEAAAAwcSd1WAYAAABtYXRlXzJxKH1xKShoI2gkaCVoJGgmaCd1WAoAAABzYW1f
-b3V0cHV0cSp9cSsoaCNoJGglaCRoJmgndVgIAAAAdW5wYWlyZWRxLH1xLShoI2gkaCVoJGgmaCd1
-WAYAAABzcmFpZHNxLn1xLyhoI2gkaCVoJGgmaCd1dVgNAAAAaXRlcmF0ZWRBdHRyc3EwXXExKGgh
-aChoKmgsaC5ldVgGAAAAbWF0ZV8xcTJOWAYAAABtYXRlXzJxM05YCAAAAG5Xb3JrZXJzcTRLCFgE
-AAAAbm9md3E1iVgEAAAAbm9yY3E2iVgIAAAAbnRocmVhZHNxN0sIWAcAAABvZmZyYXRlcThLAFgO
-AAAAb3B0aW9uc0NoZWNrZWRxOX1xOihYBgAAAG1hdGVfMXE7iFgGAAAAbWF0ZV8ycTyIWAgAAAB1
-bnBhaXJlZHE9iVgGAAAAc3JhaWRzcT6JWAgAAABudGhyZWFkc3E/iFgEAAAAdXB0b3FAiVgEAAAA
-c2tpcHFBiVgFAAAAdHJpbTVxQolYBQAAAHRyaW0zcUOJWAcAAABwaHJlZDMzcUSJWAcAAABwaHJl
-ZDY0cUWJWAwAAABzb2xleGFfcXVhbHNxRolYCQAAAGludF9xdWFsc3FHiVgMAAAAaWdub3JlX3F1
-YWxzcUiJWAQAAABub2Z3cUmJWAQAAABub3JjcUqJWA8AAABzcGxpY2VkX29wdGlvbnNxS4lYEQAA
-AHJlcG9ydGluZ19vcHRpb25zcUyJWBEAAABwYWlyZWRlbmRfb3B0aW9uc3FNiVgEAAAAdGltZXFO
-iVgOAAAAb3V0cHV0X29wdGlvbnNxT4lYCwAAAHNhbV9vcHRpb25zcVCJWAcAAABvZmZyYXRlcVGJ
-WAcAAAByZW9yZGVycVKJWAgAAABxY2ZpbHRlcnFTiXVYDgAAAG91dHB1dF9vcHRpb25zcVRoBFgR
-AAAAcGFpcmVkZW5kX29wdGlvbnNxVWgEWAcAAABwaHJlZDMzcVaJWAcAAABwaHJlZDY0cVeJWAgA
-AABxY2ZpbHRlcnFYiVgHAAAAcmVvcmRlcnFZiVgRAAAAcmVwb3J0aW5nX29wdGlvbnNxWmgEWAcA
-AABydW5Nb2RlcVtLAlgLAAAAcnVuVHJpZ2dlcnNxXF1xXShYBwAAAFRyaWdnZXJxXlgGAAAAbWF0
-ZV8xcV9YBgAAAG1hdGVfMnFgWAoAAABzYW1fb3V0cHV0cWFYCgAAAGhpc2F0Ml9pZHhxYmVYCwAA
-AHNhbV9vcHRpb25zcWNoBFgKAAAAc2FtX291dHB1dHFkTlgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRy
-eXFlQzIB2dDLAAIAAAAABZIAAAKWAAAJHwAABWMAAAWSAAAClgAACR8AAAVjAAAAAAAAAAAMAHFm
-WAQAAABza2lwcWdLAFgMAAAAc29sZXhhX3F1YWxzcWiJWA8AAABzcGxpY2VkX29wdGlvbnNxaWgE
-WAYAAABzcmFpZHNxal1xa1gEAAAAdGltZXFsiVgMAAAAdHJpZ2dlclJlYWR5cW19cW4oWAcAAABU
-cmlnZ2VycW+JWAYAAABtYXRlXzFxcIlYBgAAAG1hdGVfMnFxiVgKAAAAc2FtX291dHB1dHFyiVgK
-AAAAaGlzYXQyX2lkeHFziXVYBQAAAHRyaW0zcXRLAFgFAAAAdHJpbTVxdUsAWAgAAAB1bnBhaXJl
-ZHF2XXF3WAQAAAB1cHRvcXhLAFgGAAAAdXNlR3B1cXmJWAwAAAB1c2VTY2hlZHVsZXJxeolYCwAA
-AF9fdmVyc2lvbl9fcXtLAXUu
+dGlvbnNTdG9yZXEGfXEHKFgHAAAAVHJpZ2dlcnEIXXEJSwhhWAoAAABzYW1fb3V0cHV0cQpdcQtL
+AWFYBgAAAG1hdGVfMXEMXXENSwFhWAYAAABtYXRlXzJxDl1xD0sBYVgKAAAAaGlzYXQyX2lkeHEQ
+XXERSwlhdVgJAAAAaW50X3F1YWxzcRKJWAcAAABpdGVyYXRlcROIWA8AAABpdGVyYXRlU2V0dGlu
+Z3NxFH1xFShYDQAAAGl0ZXJhYmxlQXR0cnNxFl1xFyhYBgAAAG1hdGVfMXEYWAYAAABtYXRlXzJx
+GVgKAAAAc2FtX291dHB1dHEaWAgAAAB1bnBhaXJlZHEbWAYAAABzcmFpZHNxHGVYCAAAAG5Xb3Jr
+ZXJzcR1LCFgEAAAAZGF0YXEeY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0CnEfKVJxIChYBgAAAG1h
+dGVfMXEhfXEiKFgJAAAAZ3JvdXBTaXplcSNYAQAAADFxJFgHAAAAdGhyZWFkc3ElaCRYAwAAAHJh
+bXEmWAEAAAAwcSd1WAYAAABtYXRlXzJxKH1xKShoI2gkaCVoJGgmaCd1WAoAAABzYW1fb3V0cHV0
+cSp9cSsoaCNoJGglaCRoJmgndVgIAAAAdW5wYWlyZWRxLH1xLShoI2gkaCVoJGgmaCd1WAYAAABz
+cmFpZHNxLn1xLyhoI2gkaCVoJGgmaCd1dVgNAAAAaXRlcmF0ZWRBdHRyc3EwXXExKGghaChoKmgs
+aC5ldVgGAAAAbWF0ZV8xcTJOWAYAAABtYXRlXzJxM05YCAAAAG5Xb3JrZXJzcTRLCFgEAAAAbm9m
+d3E1iVgEAAAAbm9yY3E2iVgIAAAAbnRocmVhZHNxN0sIWAcAAABvZmZyYXRlcThLAFgOAAAAb3B0
+aW9uc0NoZWNrZWRxOX1xOihYBgAAAG1hdGVfMXE7iFgGAAAAbWF0ZV8ycTyIWAgAAAB1bnBhaXJl
+ZHE9iVgGAAAAc3JhaWRzcT6JWAgAAABudGhyZWFkc3E/iFgEAAAAdXB0b3FAiVgEAAAAc2tpcHFB
+iVgFAAAAdHJpbTVxQolYBQAAAHRyaW0zcUOJWAcAAABwaHJlZDMzcUSJWAcAAABwaHJlZDY0cUWJ
+WAwAAABzb2xleGFfcXVhbHNxRolYCQAAAGludF9xdWFsc3FHiVgMAAAAaWdub3JlX3F1YWxzcUiJ
+WAQAAABub2Z3cUmJWAQAAABub3JjcUqJWA8AAABzcGxpY2VkX29wdGlvbnNxS4lYEQAAAHJlcG9y
+dGluZ19vcHRpb25zcUyJWBEAAABwYWlyZWRlbmRfb3B0aW9uc3FNiVgEAAAAdGltZXFOiVgOAAAA
+b3V0cHV0X29wdGlvbnNxT4lYCwAAAHNhbV9vcHRpb25zcVCJWAcAAABvZmZyYXRlcVGJWAcAAABy
+ZW9yZGVycVKJWAgAAABxY2ZpbHRlcnFTiXVYDgAAAG91dHB1dF9vcHRpb25zcVRoBFgRAAAAcGFp
+cmVkZW5kX29wdGlvbnNxVWgEWAcAAABwaHJlZDMzcVaJWAcAAABwaHJlZDY0cVeJWAgAAABxY2Zp
+bHRlcnFYiVgHAAAAcmVvcmRlcnFZiVgRAAAAcmVwb3J0aW5nX29wdGlvbnNxWmgEWAcAAABydW5N
+b2RlcVtLAlgLAAAAcnVuVHJpZ2dlcnNxXF1xXShYBwAAAFRyaWdnZXJxXlgGAAAAbWF0ZV8xcV9Y
+BgAAAG1hdGVfMnFgWAoAAABzYW1fb3V0cHV0cWFYCgAAAGhpc2F0Ml9pZHhxYmVYCwAAAHNhbV9v
+cHRpb25zcWNoBFgKAAAAc2FtX291dHB1dHFkTlgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXFlQzIB
+2dDLAAIAAAAABZIAAAKWAAAJHwAABWMAAAWSAAAClgAACR8AAAVjAAAAAAAAAAAMAHFmWAQAAABz
+a2lwcWdLAFgMAAAAc29sZXhhX3F1YWxzcWiJWA8AAABzcGxpY2VkX29wdGlvbnNxaWgEWAYAAABz
+cmFpZHNxal1xa1gEAAAAdGltZXFsiVgMAAAAdHJpZ2dlclJlYWR5cW19cW4oWAcAAABUcmlnZ2Vy
+cW+JWAYAAABtYXRlXzFxcIlYBgAAAG1hdGVfMnFxiVgKAAAAc2FtX291dHB1dHFyiVgKAAAAaGlz
+YXQyX2lkeHFziXVYBQAAAHRyaW0zcXRLAFgFAAAAdHJpbTVxdUsAWAgAAAB1bnBhaXJlZHF2XXF3
+WAQAAAB1cHRvcXhLAFgGAAAAdXNlR3B1cXmJWAwAAAB1c2VTY2hlZHVsZXJxeolYCwAAAF9fdmVy
+c2lvbl9fcXtLAXUu
 </properties>
-		<properties format="literal" node_id="11">{'annotation_gtf': '', 'controlAreaVisible': True, 'counts_output': '/data/work/counts.txt', 'exportGraphics': False, 'gtf_annotation': 'exon', 'gtf_attribute': 'gene_id', 'inputConnectionsStore': {'sambam_input': [6, 12], 'annotation_gtf': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['sambam_input'], 'nWorkers': 1}, 'nWorkers': 1, 'nthreads': 8, 'optionsChecked': {'paired_end_inputs': False, 'paired_end_reads': False, 'nthreads': True, 'gtf_annotation': True, 'gtf_attribute': True, 'strand_specific': True}, 'paired_end_inputs': True, 'paired_end_reads': True, 'runMode': 2, 'runTriggers': ['sambam_input', 'annotation_gtf'], 'sambam_input': None, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x92\x00\x00\x02\x96\x00\x00\t\xa7\x00\x00\x05g\x00\x00\x05\x92\x00\x00\x02\xae\x00\x00\t\xa7\x00\x00\x05d\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'strand_specific': 1, 'triggerReady': {'sambam_input': False, 'annotation_gtf': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="11">{'annotation_gtf': '', 'controlAreaVisible': True, 'counts_output': '/data/work/counts.txt', 'exportGraphics': False, 'gtf_annotation': 'exon', 'gtf_attribute': 'gene_id', 'inputConnectionsStore': {'sambam_input': [12], 'annotation_gtf': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['sambam_input'], 'nWorkers': 1}, 'nWorkers': 1, 'nthreads': 8, 'optionsChecked': {'paired_end_inputs': False, 'paired_end_reads': False, 'nthreads': True, 'gtf_annotation': True, 'gtf_attribute': True, 'strand_specific': True}, 'paired_end_inputs': True, 'paired_end_reads': True, 'runMode': 2, 'runTriggers': ['sambam_input', 'annotation_gtf'], 'sambam_input': None, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x92\x00\x00\x02\x96\x00\x00\t\xa7\x00\x00\x05g\x00\x00\x05\x92\x00\x00\x02\xae\x00\x00\t\xa7\x00\x00\x05d\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'strand_specific': 1, 'triggerReady': {'sambam_input': False, 'annotation_gtf': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 	</node_properties>
 </scheme>

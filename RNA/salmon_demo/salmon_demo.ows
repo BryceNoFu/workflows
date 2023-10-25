@@ -1,0 +1,65 @@
+<?xml version="1.0" ?><scheme description="" title="salmon-demo" version="2.0">
+	<nodes>
+		<node id="0" name="SalmonIndex" position="(638.0, 240.0)" project_name="salmon-demo" qualified_name="salmon_demo.OWSalmonIndex.OWSalmonIndex" title="SalmonIndex" version=""/>
+		<node id="1" name="gnumeric" position="(968.0, 243.0)" project_name="salmon-demo" qualified_name="salmon_demo.OWgnumeric.OWgnumeric" title="gnumeric" version=""/>
+		<node id="2" name="downloadURL" position="(451.0, 237.0)" project_name="salmon-demo" qualified_name="salmon_demo.OWdownloadURL.OWdownloadURL" title="downloadURL" version=""/>
+		<node id="3" name="SalmonQuant" position="(799.0, 244.0)" project_name="salmon-demo" qualified_name="salmon_demo.OWSalmonQuant.OWSalmonQuant" title="SalmonQuant" version=""/>
+	</nodes>
+	<links>
+		<link enabled="true" id="0" sink_channel="trigger" sink_node_id="0" source_channel="directory" source_node_id="2"/>
+		<link enabled="true" id="1" sink_channel="index" sink_node_id="3" source_channel="index" source_node_id="0"/>
+		<link enabled="true" id="2" sink_channel="Trigger" sink_node_id="1" source_channel="trigger" source_node_id="3"/>
+	</links>
+	<annotations/>
+	<thumbnail/>
+	<node_properties>
+		<properties format="literal" node_id="0">{'controlAreaVisible': True, 'decoys': '', 'exportGraphics': False, 'features': False, 'filterSize': 1, 'gencode': False, 'index': '/data/salmon_demo_work/athal_index', 'inputConnectionsStore': {'trigger': [3]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'keepDuplicates': False, 'kmerLen': 31, 'nThreads': 4, 'nWorkers': 1, 'noClip': False, 'optionsChecked': {'bootstrap': False, 'seed': False, 'plaintext': False, 'fusion': False, 'single': False, 'single_overhang': False, 'fr_stranded': False, 'rf_stranded': False, 'fragment_length': False, 'stdev': False, 'pseudoBam': False, 'genomeBam': False, 'gtf': False, 'multiSample': False, 'gencode': False, 'features': False, 'keepDuplicates': False, 'nThreads': True, 'filterSize': False, 'tmpdir': False, 'sparse': False, 'decoys': False, 'noClip': False, 'type': False, 'kmerLen': False}, 'runMode': 2, 'runTriggers': ['trigger'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03\x88\x00\x00\x02!\x00\x00\x06\xef\x00\x00\x04\x81\x00\x00\x03\x88\x00\x00\x029\x00\x00\x06\xef\x00\x00\x04~\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'sparse': False, 'tmpdir': '', 'transcriptFasta': '/data/salmon_demo_work/Arabidopsis_thaliana.TAIR10.28.cdna.all.fa.gz', 'triggerReady': {'trigger': True}, 'type': 'puff', 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="1">{'controlAreaVisible': True, 'exportGraphics': True, 'inputConnectionsStore': {'Trigger': [4]}, 'inputFile': '/data/salmon_demo_work/DRR016125_quant/quant.sf', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'inputFile': True}, 'runMode': 2, 'runTriggers': ['Trigger'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x92\x00\x00\x02\xae\x00\x00\x08~\x00\x00\x03\xb0\x00\x00\x05\x92\x00\x00\x02\xae\x00\x00\x08~\x00\x00\x03\xb0\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'Trigger': True}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="pickle" node_id="2">gAN9cQAoWAMAAABVUkxxAV1xAihYgAAAAGZ0cDovL2Z0cC5lbnNlbWJsZ2Vub21lcy5vcmcvcHVi
+L3BsYW50cy9yZWxlYXNlLTI4L2Zhc3RhL2FyYWJpZG9wc2lzX3RoYWxpYW5hL2NkbmEvQXJhYmlk
+b3BzaXNfdGhhbGlhbmEuVEFJUjEwLjI4LmNkbmEuYWxsLmZhLmd6cQNYSAAAAGZ0cDovL2Z0cC5z
+cmEuZWJpLmFjLnVrL3ZvbDEvZmFzdHEvRFJSMDE2L0RSUjAxNjEyNS9EUlIwMTYxMjVfMS5mYXN0
+cS5nenEEWEgAAABmdHA6Ly9mdHAuc3JhLmViaS5hYy51ay92b2wxL2Zhc3RxL0RSUjAxNi9EUlIw
+MTYxMjUvRFJSMDE2MTI1XzIuZmFzdHEuZ3pxBWVYDwAAAGNvbmNhdGVuYXRlRmlsZXEGWAAAAABx
+B1gSAAAAY29udHJvbEFyZWFWaXNpYmxlcQiIWAoAAABkZWNvbXByZXNzcQmJWAkAAABkaXJlY3Rv
+cnlxClgWAAAAL2RhdGEvc2FsbW9uX2RlbW9fd29ya3ELWA4AAABleHBvcnRHcmFwaGljc3EMiVgV
+AAAAaW5wdXRDb25uZWN0aW9uc1N0b3JlcQ19cQ5YBwAAAGl0ZXJhdGVxD4hYDwAAAGl0ZXJhdGVT
+ZXR0aW5nc3EQfXERKFgNAAAAaXRlcmFibGVBdHRyc3ESXXETWAMAAABVUkxxFGFYCAAAAG5Xb3Jr
+ZXJzcRVLAVgEAAAAZGF0YXEWY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0CnEXKVJxGFgDAAAAVVJM
+cRl9cRooWAkAAABncm91cFNpemVxG1gBAAAAMXEcWAcAAAB0aHJlYWRzcR1oHFgDAAAAcmFtcR5Y
+AQAAADBxH3VzWA0AAABpdGVyYXRlZEF0dHJzcSBdcSFoGWF1WAgAAABuV29ya2Vyc3EiSwFYDgAA
+AG9wdGlvbnNDaGVja2VkcSN9cSQoWAoAAABkZWNvbXByZXNzcSWJWA8AAABjb25jYXRlbmF0ZUZp
+bGVxJol1WAcAAABydW5Nb2RlcSdLAFgLAAAAcnVuVHJpZ2dlcnNxKF1xKVgTAAAAc2F2ZWRXaWRn
+ZXRHZW9tZXRyeXEqQzIB2dDLAAIAAAAABDYAAAI5AAAJDAAABTcAAAQ2AAACUQAACQwAAAU0AAAA
+AAAAAAAMAHErWAwAAAB0cmlnZ2VyUmVhZHlxLH1xLVgGAAAAdXNlR3B1cS6JWAwAAAB1c2VTY2hl
+ZHVsZXJxL4lYCwAAAF9fdmVyc2lvbl9fcTBLAXUu
+</properties>
+		<properties format="pickle" node_id="3">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDgAAAGV4cG9ydEdyYXBoaWNzcQKJWAcA
+AABnZW5lTWFwcQNYAAAAAHEEWAUAAABpbmRleHEFWCIAAAAvZGF0YS9zYWxtb25fZGVtb193b3Jr
+L2F0aGFsX2luZGV4cQZYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXEHfXEIaAVdcQlLAWFzWAcA
+AABpdGVyYXRlcQqIWA8AAABpdGVyYXRlU2V0dGluZ3NxC31xDChYDQAAAGl0ZXJhYmxlQXR0cnNx
+DV1xDihYBgAAAG1hdGVzMXEPWAYAAABtYXRlczJxEFgMAAAAdW5tYXRlZFJlYWRzcRFYCQAAAG91
+dHB1dERpcnESZVgEAAAAZGF0YXETY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0CnEUKVJxFShYBgAA
+AG1hdGVzMXEWfXEXKFgJAAAAZ3JvdXBTaXplcRhYAQAAADFxGVgHAAAAdGhyZWFkc3EaWAEAAAAx
+cRtYAwAAAHJhbXEcWAEAAAAwcR11WAYAAABtYXRlczJxHn1xHyhoGFgBAAAAMXEgaBpYAQAAADFx
+IWgcWAEAAAAwcSJ1WAwAAAB1bm1hdGVkUmVhZHNxI31xJChoGFgBAAAAMXElaBpYAQAAADFxJmgc
+WAEAAAAwcSd1WAkAAABvdXRwdXREaXJxKH1xKShoGFgBAAAAMXEqaBpYAQAAADFxK2gcWAEAAAAw
+cSx1dVgNAAAAaXRlcmF0ZWRBdHRyc3EtXXEuKGgWaB5oI2goZVgIAAAAbldvcmtlcnNxL0sBdVgH
+AAAAbGliVHlwZXEwWAEAAABBcTFYBgAAAG1hdGVzMXEyXXEzWCsAAAAvZGF0YS9zYWxtb25fZGVt
+b193b3JrL0RSUjAxNjEyNV8xLmZhc3RxLmd6cTRhWAYAAABtYXRlczJxNV1xNlgrAAAAL2RhdGEv
+c2FsbW9uX2RlbW9fd29yay9EUlIwMTYxMjVfMi5mYXN0cS5nenE3YVgIAAAAblRocmVhZHNxOEsE
+aC9LAVgOAAAAb3B0aW9uc0NoZWNrZWRxOX1xOihYCQAAAGJvb3RzdHJhcHE7iVgEAAAAc2VlZHE8
+iVgJAAAAcGxhaW50ZXh0cT2JWAYAAABmdXNpb25xPolYBgAAAHNpbmdsZXE/iVgPAAAAc2luZ2xl
+X292ZXJoYW5ncUCJWAsAAABmcl9zdHJhbmRlZHFBiVgLAAAAcmZfc3RyYW5kZWRxQolYDwAAAGZy
+YWdtZW50X2xlbmd0aHFDiVgFAAAAc3RkZXZxRIlYCQAAAHBzZXVkb0JhbXFFiVgJAAAAZ2Vub21l
+QmFtcUaJWAMAAABndGZxR4lYCwAAAG11bHRpU2FtcGxlcUiJWAYAAABtYXRlczJxSYhYBgAAAG1h
+dGVzMXFKiFgMAAAAdW5tYXRlZFJlYWRzcUuJWAgAAABuVGhyZWFkc3FMiFgHAAAAZ2VuZU1hcHFN
+iXVYCQAAAG91dHB1dERpcnFOXXFPWCYAAAAvZGF0YS9zYWxtb25fZGVtb193b3JrL0RSUjAxNjEy
+NV9xdWFudHFQYVgHAAAAcnVuTW9kZXFRSwJYCwAAAHJ1blRyaWdnZXJzcVJdcVNYBQAAAGluZGV4
+cVRhWBMAAABzYXZlZFdpZGdldEdlb21ldHJ5cVVDMgHZ0MsAAgAAAAADiAAAAiEAAAfsAAAEuwAA
+A4gAAAI5AAAH7AAABLgAAAAAAAAAAAwAcVZYDAAAAHRyaWdnZXJSZWFkeXFXfXFYaFSIc1gMAAAA
+dW5tYXRlZFJlYWRzcVldcVpYBgAAAHVzZUdwdXFbiVgMAAAAdXNlU2NoZWR1bGVycVyJWAsAAABf
+X3ZlcnNpb25fX3FdSwF1Lg==
+</properties>
+	</node_properties>
+</scheme>

@@ -1,0 +1,79 @@
+<?xml version="1.0" ?><scheme description="" title="nanopore-itd" version="2.0">
+	<nodes>
+		<node id="0" name="Start" position="(-900, 0)" project_name="nanopore-itd" qualified_name="nanopore_itd.OWStart.OWStart" title="Start" version=""/>
+		<node id="1" name="downloadURL" position="(-450, 150)" project_name="nanopore-itd" qualified_name="nanopore_itd.OWdownloadURL.OWdownloadURL" title="Download fast5 files" version=""/>
+		<node id="2" name="igv" position="(-300, 600)" project_name="nanopore-itd" qualified_name="nanopore_itd.OWigv.OWigv" title="View alignments" version=""/>
+		<node id="3" name="dorado" position="(-600, 300)" project_name="nanopore-itd" qualified_name="nanopore_itd.OWdorado.OWdorado" title="dorado" version=""/>
+		<node id="4" name="gnumeric" position="(-600, 600)" project_name="nanopore-itd" qualified_name="nanopore_itd.OWgnumeric.OWgnumeric" title="gnumeric" version=""/>
+		<node id="5" name="S3_download" position="(-600, 150)" project_name="nanopore-itd" qualified_name="nanopore_itd.OWS3_download.OWS3_download" title="Download genome" version=""/>
+		<node id="6" name="svim" position="(-600, 450)" project_name="nanopore-itd" qualified_name="nanopore_itd.OWsvim.OWsvim" title="svim" version=""/>
+		<node id="7" name="igv" position="(-450, 600)" project_name="nanopore-itd" qualified_name="nanopore_itd.OWigv.OWigv" title="View variants" version=""/>
+	</nodes>
+	<links>
+		<link enabled="true" id="0" sink_channel="directory" sink_node_id="1" source_channel="data_dir" source_node_id="0"/>
+		<link enabled="true" id="1" sink_channel="downloadDir" sink_node_id="5" source_channel="genome_dir" source_node_id="0"/>
+		<link enabled="true" id="2" sink_channel="reference" sink_node_id="3" source_channel="genome_file" source_node_id="0"/>
+		<link enabled="true" id="3" sink_channel="InputDir" sink_node_id="3" source_channel="fast5_dir" source_node_id="0"/>
+		<link enabled="true" id="4" sink_channel="OutputDir" sink_node_id="3" source_channel="bam_dir" source_node_id="0"/>
+		<link enabled="true" id="5" sink_channel="trigger" sink_node_id="3" source_channel="downloadDir" source_node_id="5"/>
+		<link enabled="true" id="6" sink_channel="trigger2" sink_node_id="3" source_channel="directory" source_node_id="1"/>
+		<link enabled="true" id="7" sink_channel="trigger" sink_node_id="2" source_channel="OutputDir" source_node_id="3"/>
+		<link enabled="true" id="8" sink_channel="OutputDir" sink_node_id="6" source_channel="svim_dir" source_node_id="0"/>
+		<link enabled="true" id="9" sink_channel="Trigger" sink_node_id="4" source_channel="OutputDir" source_node_id="6"/>
+		<link enabled="true" id="10" sink_channel="inputDirectory" sink_node_id="4" source_channel="svim_dir" source_node_id="0"/>
+		<link enabled="true" id="11" sink_channel="trigger" sink_node_id="6" source_channel="OutputDir" source_node_id="3"/>
+		<link enabled="true" id="12" sink_channel="reference" sink_node_id="6" source_channel="genome_file" source_node_id="0"/>
+		<link enabled="true" id="13" sink_channel="trigger" sink_node_id="7" source_channel="OutputDir" source_node_id="6"/>
+	</links>
+	<annotations>
+		<text font-family="Helvetica" font-size="16" id="0" rect="(-912.0, 133.0, 150.0, 31.0)" type="text/plain">Download</text>
+		<text font-family="Helvetica" font-size="16" id="1" rect="(-920.0, 293.0, 166.0, 50.0)" type="text/plain">Call bases + Align</text>
+		<text font-family="Helvetica" font-size="16" id="2" rect="(-914.0, 447.0, 150.0, 31.0)" type="text/plain">Variant Call</text>
+		<text font-family="Helvetica" font-size="16" id="3" rect="(-915.0, 596.0, 150.0, 31.0)" type="text/plain">Visualize</text>
+	</annotations>
+	<thumbnail/>
+	<node_properties>
+		<properties format="literal" node_id="0">{'bam_dir': '/data/nanopore-test/bam/20200210_FLT3DNA_MO', 'controlAreaVisible': True, 'data_dir': '/data/nanopore-test/data', 'exportGraphics': False, 'fast5_dir': '/data/nanopore-test/data/20200210_FLT3DNA_MO/fast5/barcode22', 'genome_dir': '/data/nanopore-test/genome', 'genome_file': '/data/nanopore-test/genome/hg19.fa', 'inputConnectionsStore': {}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'gdc_credentials': False, 'gdc_token': False, 'clean_files': False, 'fastq_files': False, 'fastq1_files': False, 'fastq2_files': False, 'fastqo1_files': False, 'fastqo2_files': False, 'fastqs_files': False, 'fastqc_files': False, 'paired_end': False, 'realigned_files': False, 'recalibrate_files': False, 'realigned_indels_files': False, 'pindel_filter_files': False, 'genome_dict_file': False, 'biobambam_files': False, 'mutect2_normal_files': False, 'mutect2_tumor_files': False, 'mutect2_variants_files': False, 'variant_annotation_files': False, 'maf_files': False, 'mark_dupes_outputs': False, 'mark_dupes_metrics': False, 'coclean_intervals': False, 'somatic_sniper_files': False, 'prepend_date': False, 'varscan_pileup_files': False, 'varscan_snp_files': False, 'varscan_indel_files': False, 'muse_call_files': False, 'muse_sump_input_files': False, 'muse_sump_output_files': False, 'pindel_config_files': False, 'pindel_variants_files': False, 'pindel_variants_sorted_files': False, 'pindel_variants_filtered_files': False, 'pindel_prefix_files': False, 'cpu_url': False, 'gpu_url': True, 'models_dir': False}, 'runMode': 0, 'runTriggers': [], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02u\x00\x00\x01n\x00\x00\x00\x00\x00\x00\x00\x18\x00\x00\x02u\x00\x00\x01k\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'svim_dir': '/data/nanopore-test/svim/', 'triggerReady': {}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="pickle" node_id="1">gAN9cQAoWAMAAABVUkxxAV1xAlhVAAAAaHR0cHM6Ly9kcml2ZS5nb29nbGUuY29tL2ZpbGUvZC8x
+Mk1yaXBjVUpDVXp5Ym84QWZIQTM1endFOE9jUkdsZHkvdmlldz91c3A9c2hhcmVfbGlua3EDYVgP
+AAAAY29uY2F0ZW5hdGVGaWxlcQRYAAAAAHEFWBIAAABjb250cm9sQXJlYVZpc2libGVxBohYCgAA
+AGRlY29tcHJlc3NxB4hYCQAAAGRpcmVjdG9yeXEIWBgAAAAvZGF0YS9uYW5vcG9yZS10ZXN0L2Rh
+dGFxCVgOAAAAZXhwb3J0R3JhcGhpY3NxColYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXELfXEM
+WAkAAABkaXJlY3RvcnlxDV1xDksBYXNYBwAAAGl0ZXJhdGVxD4lYDwAAAGl0ZXJhdGVTZXR0aW5n
+c3EQfXERKFgNAAAAaXRlcmFibGVBdHRyc3ESXXETWAMAAABVUkxxFGFYCAAAAG5Xb3JrZXJzcRVL
+AlgEAAAAZGF0YXEWY2NvbGxlY3Rpb25zCk9yZGVyZWREaWN0CnEXKVJxGChYCQAAAGRpcmVjdG9y
+eXEZfXEaKFgJAAAAZ3JvdXBTaXplcRtYAQAAADFxHFgHAAAAdGhyZWFkc3EdaBxYAwAAAHJhbXEe
+WAEAAAAwcR91WAMAAABVUkxxIH1xIShoG2gcaB1oHGgeaB91dVgNAAAAaXRlcmF0ZWRBdHRyc3Ei
+XXEjKGgZaCBldVgIAAAAbldvcmtlcnNxJEsCWAkAAABub0Nsb2JiZXJxJYlYDgAAAG9wdGlvbnND
+aGVja2VkcSZ9cScoWAoAAABkZWNvbXByZXNzcSiJWA8AAABjb25jYXRlbmF0ZUZpbGVxKYlYCQAA
+AG5vQ2xvYmJlcnEqiXVYBwAAAHJ1bk1vZGVxK0sCWAsAAABydW5UcmlnZ2Vyc3EsXXEtWAkAAABk
+aXJlY3RvcnlxLmFYEwAAAHNhdmVkV2lkZ2V0R2VvbWV0cnlxL0MyAdnQywACAAAAAACaAAAAvQAA
+A4YAAAJJAAAAmgAAANUAAAOGAAACRgAAAAAAAAAAB4BxMFgMAAAAdHJpZ2dlclJlYWR5cTF9cTJY
+CQAAAGRpcmVjdG9yeXEziHNYBgAAAHVzZUdwdXE0iVgMAAAAdXNlU2NoZWR1bGVycTWJWAsAAABf
+X3ZlcnNpb25fX3E2SwF1Lg==
+</properties>
+		<properties format="pickle" node_id="2">gAN9cQAoWBQAAABhdXRvRGV0ZXJtaW5lUmVnaW9uc3EBiFgFAAAAYmF0Y2hxAlgAAAAAcQNYEgAA
+AGNvbnRyb2xBcmVhVmlzaWJsZXEEiFgOAAAAZXhwb3J0R3JhcGhpY3NxBYhYBgAAAGdlbm9tZXEG
+WAQAAABoZzM4cQdYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9yZXEIfXEJWAcAAAB0cmlnZ2VycQpd
+cQtLBGFzWAkAAABpbnB1dEZpbGVxDH1xDShYBAAAAHJvb3RxDlgrAAAAL2RhdGEvbmFub3BvcmUt
+dGVzdC9iYW0vMjAyMDAyMTBfRkxUM0ROQV9NT3EPWAcAAABwYXR0ZXJucRBYCwAAACpzb3J0ZWQu
+YmFtcRFYCAAAAGZpbmRGaWxlcRKIWAcAAABmaW5kRGlycROJWAUAAAB2YWx1ZXEUXXEVWDwAAAAv
+ZGF0YS9uYW5vcG9yZS10ZXN0L2JhbS8yMDIwMDIxMF9GTFQzRE5BX01PL2NhbGxzLXNvcnRlZC5i
+YW1xFmF1WAcAAABpdGVyYXRlcReIWA8AAABpdGVyYXRlU2V0dGluZ3NxGH1xGShYDQAAAGl0ZXJh
+YmxlQXR0cnNxGl1xG1gJAAAAaW5wdXRGaWxlcRxhWAQAAABkYXRhcR1jY29sbGVjdGlvbnMKT3Jk
+ZXJlZERpY3QKcR4pUnEfWAkAAABpbnB1dEZpbGVxIH1xIShYCQAAAGdyb3VwU2l6ZXEiWAEAAAAx
+cSNYBwAAAHRocmVhZHNxJGgjWAMAAAByYW1xJVgBAAAAMHEmdXNYDQAAAGl0ZXJhdGVkQXR0cnNx
+J11xKGggYVgIAAAAbldvcmtlcnNxKUsCdVgIAAAAbldvcmtlcnNxKksCWA4AAABvcHRpb25zQ2hl
+Y2tlZHErfXEsKFgGAAAAZ2Vub21lcS2JWAUAAABiYXRjaHEuiVgUAAAAYXV0b0RldGVybWluZVJl
+Z2lvbnNxL4l1WAcAAABydW5Nb2RlcTBLAlgLAAAAcnVuVHJpZ2dlcnNxMV1xMlgHAAAAdHJpZ2dl
+cnEzYVgTAAAAc2F2ZWRXaWRnZXRHZW9tZXRyeXE0QzIB2dDLAAIAAAAAAVYAAAD4AAAEQgAAAksA
+AAFWAAAA+AAABEIAAAJLAAAAAAAAAAAHgHE1WAwAAAB0cmlnZ2VyUmVhZHlxNn1xN2gziHNYBgAA
+AHVzZUdwdXE4iVgMAAAAdXNlU2NoZWR1bGVycTmJWAsAAABfX3ZlcnNpb25fX3E6SwF1Lg==
+</properties>
+		<properties format="literal" node_id="3">{'InputDir': '/data/nanopore-test/data/20200210_FLT3DNA_MO/fast5/barcode22', 'OutputDir': '/data/nanopore-test/bam/20200210_FLT3DNA_MO', 'controlAreaVisible': True, 'device': 'cuda:all', 'exportGraphics': False, 'inputConnectionsStore': {'reference': [1], 'InputDir': [1], 'OutputDir': [1], 'trigger': [3], 'trigger2': [2]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'modelFile': 'dna_r9.4.1_e8_fast@v3.4', 'nWorkers': 1, 'nameSort': False, 'optionsChecked': {'device': False, 'nameSort': False}, 'reference': '/data/nanopore-test/genome/hg19.fa', 'runMode': 2, 'runTriggers': ['trigger', 'trigger2'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x01\x10\x00\x00\x009\x00\x00\x05\xc1\x00\x00\x02q\x00\x00\x01\x10\x00\x00\x009\x00\x00\x05\xc1\x00\x00\x02q\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {'trigger': True, 'trigger2': True, 'InputDir': False, 'reference': False, 'OutputDir': False, 'modelFile': False}, 'useGpu': True, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="4">{'controlAreaVisible': True, 'exportGraphics': True, 'inputConnectionsStore': {'Trigger': [6], 'inputDirectory': [1]}, 'inputDirectory': '/data/nanopore-test/svim/', 'inputFile': 'variants.vcf', 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'inputDirectory': True}, 'runMode': 2, 'runTriggers': ['inputDirectory', 'Trigger'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x01\x14\x00\x00\x00+\x00\x00\x05\x95\x00\x00\x03(\x00\x00\x01\x14\x00\x00\x00+\x00\x00\x05\x95\x00\x00\x03(\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {'inputDirectory': True, 'Trigger': True}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="5">{'awsdir': '/data/.aws', 'bucket': 'nanopore-fusion-uw', 'controlAreaVisible': True, 'dirs': ['genome/hg19.fa', 'genome/hg19.idx'], 'downloadDir': '/data/nanopore-test/genome', 'exportGraphics': False, 'inputConnectionsStore': {'downloadDir': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['dirs'], 'nWorkers': 1}, 'key': '', 'nWorkers': 1, 'nthreads': 0, 'optionsChecked': {'nthreads': False, 'key': False, 'secret': False, 'region': False}, 'region': 'us-east-2', 'runMode': 2, 'runTriggers': ['downloadDir'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x02\x8c\x00\x00\x00E\x00\x00\x05x\x00\x00\x01\xf1\x00\x00\x02\x8c\x00\x00\x00E\x00\x00\x05x\x00\x00\x01\xf1\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'secret': '', 'triggerReady': {'downloadDir': True}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="6">{'InputFile': '/data/nanopore-test/bam/20200210_FLT3DNA_MO/calls-sorted.bam', 'OutputDir': '/data/nanopore-test/svim/', 'controlAreaVisible': True, 'exportGraphics': False, 'inputConnectionsStore': {'OutputDir': [1], 'trigger': [4], 'reference': [1]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'device': False, 'nameSort': False, 'types': True}, 'reference': '/data/nanopore-test/genome/hg19.fa', 'runMode': 2, 'runTriggers': ['trigger', 'OutputDir', 'reference'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x05\x8a\x00\x00\x00\xe7\x00\x00\x08v\x00\x00\x02U\x00\x00\x05\x8a\x00\x00\x00\xff\x00\x00\x08v\x00\x00\x02R\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'trigger': True, 'InputFile': False, 'OutputDir': True, 'reference': True}, 'types': 'INS,DUP:TANDEM', 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="7">{'autoDetermineRegions': True, 'batch': '', 'controlAreaVisible': True, 'exportGraphics': True, 'genome': 'hg38', 'inputConnectionsStore': {'trigger': [6]}, 'inputFile': {'root': '/data/nanopore-test/svim/', 'pattern': 'variants.vcf', 'findFile': True, 'findDir': False, 'value': ['/data/nanopore-test/svim/variants.vcf']}, 'iterate': False, 'iterateSettings': {'iterableAttrs': ['inputFile'], 'nWorkers': 1}, 'nWorkers': 1, 'optionsChecked': {'genome': False, 'batch': False, 'autoDetermineRegions': False}, 'runMode': 2, 'runTriggers': ['trigger'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x01V\x00\x00\x00\xf8\x00\x00\x04B\x00\x00\x02K\x00\x00\x01V\x00\x00\x00\xf8\x00\x00\x04B\x00\x00\x02K\x00\x00\x00\x00\x00\x00\x00\x00\x07\x80', 'triggerReady': {'trigger': True}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+	</node_properties>
+</scheme>

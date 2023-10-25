@@ -60,7 +60,7 @@ ZWRxBIlYDQAAAGFsaWduZWRSZWdpb25xBWgCWAUAAABiemlwMnEGiVgEAAAAY2xpcHEHiVgSAAAA
 Y29udHJvbEFyZWFWaXNpYmxlcQiIWAsAAABkZWZsaW5lUXVhbHEJaAJYCgAAAGRlZmxpbmVTZXFx
 CmgCWAkAAABkaXNhYmxlbXRxC4lYBgAAAGR1bXBjc3EMaAJYDgAAAGV4cG9ydEdyYXBoaWNzcQ2J
 WAUAAABmYXN0YXEOiVgKAAAAZnFkdmVyc2lvbnEPiVgLAAAAZ3JvdXBpbkRpcnNxEIlYBAAAAGd6
-aXBxEYhYBwAAAGhlbGljb3NxEolYBAAAAGhlbHBxE4lYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9y
+aXBxEU5YBwAAAGhlbGljb3NxEolYBAAAAGhlbHBxE4lYFQAAAGlucHV0Q29ubmVjdGlvbnNTdG9y
 ZXEUfXEVKFgEAAAAZ3ppcHEWXXEXSwFhWAYAAABzcmFpZHNxGF1xGUsBYVgJAAAAT3V0cHV0RGly
 cRpdcRtLAWF1WAcAAABpdGVyYXRlcRyIWA8AAABpdGVyYXRlU2V0dGluZ3NxHX1xHihYDQAAAGl0
 ZXJhYmxlQXR0cnNxH11xIChYBgAAAHNyYWlkc3EhWAoAAABzcG90R3JvdXBzcSJlWAQAAABkYXRh
@@ -124,7 +124,7 @@ ZGdldEdlb21ldHJ5cThDMgHZ0MsAAgAAAAAFkgAAApYAAAmSAAAETwAABZIAAAKWAAAJkgAABE8A
 AAAAAAAAAAwAcTlYDAAAAHRyaWdnZXJSZWFkeXE6fXE7KGg1iWg2iWg3iXVYBgAAAHVzZUdwdXE8
 iVgMAAAAdXNlU2NoZWR1bGVycT2JWAsAAABfX3ZlcnNpb25fX3E+SwF1Lg==
 </properties>
-		<properties format="literal" node_id="9">{'controlAreaVisible': True, 'countsFile': '', 'exportGraphics': False, 'inputConnectionsStore': {'metaFile': [1], 'countsFile': [13]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'metaFile': '', 'nWorkers': 1, 'optionsChecked': {'File': False}, 'outputFile': '', 'runMode': 2, 'runTriggers': ['metaFile', 'countsFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03\x1a\x00\x00\x02\xc0\x00\x00\x06\x8a\x00\x00\x04\xd3\x00\x00\x03\x1a\x00\x00\x02\xd8\x00\x00\x06\x8a\x00\x00\x04\xd0\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'metaFile': False, 'countsFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
+		<properties format="literal" node_id="9">{'controlAreaVisible': True, 'countsFile': '', 'exportGraphics': False, 'inputConnectionsStore': {'metaFile': [1], 'countsFile': [13]}, 'iterate': False, 'iterateSettings': {'iterableAttrs': [], 'nWorkers': 1}, 'metaFile': '', 'nWorkers': 1, 'optionsChecked': {'File': False}, 'outputFile': '/data/work/normalized_counts.txt', 'runMode': 2, 'runTriggers': ['metaFile', 'countsFile'], 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x02\x00\x00\x00\x00\x03\x1a\x00\x00\x02\xc0\x00\x00\x06\x8a\x00\x00\x04\xb8\x00\x00\x03\x1a\x00\x00\x02\xc0\x00\x00\x06\x8a\x00\x00\x04\xb8\x00\x00\x00\x00\x00\x00\x00\x00\x0c\x00', 'triggerReady': {'metaFile': False, 'countsFile': False}, 'useGpu': False, 'useScheduler': False, '__version__': 1}</properties>
 		<properties format="pickle" node_id="10">gAN9cQAoWBIAAABjb250cm9sQXJlYVZpc2libGVxAYhYDgAAAGV4cG9ydEdyYXBoaWNzcQKJWAoA
 AABoaXNhdDJfaWR4cQNYAAAAAHEEWAwAAABpZ25vcmVfcXVhbHNxBYlYFQAAAGlucHV0Q29ubmVj
 dGlvbnNTdG9yZXEGfXEHKFgKAAAAaGlzYXQyX2lkeHEIXXEJSwthWAYAAABtYXRlXzFxCl1xC0sB
